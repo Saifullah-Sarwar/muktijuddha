@@ -1,0 +1,1919 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#16a34a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>আমার বাংলা বই - পাঠ ৫২ : আমাদের মুক্তিযুদ্ধ</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Galada&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+body{font-family:'Hind Siliguri',sans-serif;background:linear-gradient(135deg,#dcfce7 0%,#fef3c7 50%,#fee2e2 100%);min-height:100vh;user-select:none;overflow-x:hidden;}
+.font-title{font-family:'Galada',cursive;}
+@keyframes float-g{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-8px) rotate(1.5deg)}}
+.animate-float{animation:float-g 3.5s infinite ease-in-out;}
+@keyframes ray-spin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
+.ray-spin{animation:ray-spin 30s linear infinite;transform-origin:center;}
+@keyframes flag-wave{0%,100%{transform:skewY(0) scaleY(1)}50%{transform:skewY(-3deg) scaleY(1.02)}}
+.flag-wave{animation:flag-wave 3s infinite ease-in-out;transform-origin:left center;}
+@keyframes bubble-r{0%{transform:translateY(0) scale(.6);opacity:0}50%{opacity:.8}100%{transform:translateY(-130px) scale(1.2);opacity:0}}
+.bubble{position:absolute;background:rgba(255,255,255,.65);border:1px solid rgba(255,255,255,.9);border-radius:50%;pointer-events:none;animation:bubble-r 4s infinite linear;}
+::-webkit-scrollbar{width:8px;height:8px}
+::-webkit-scrollbar-track{background:#dcfce7}
+::-webkit-scrollbar-thumb{background:#16a34a;border-radius:10px}
+.line-card{transition:all .2s ease-in-out}
+.line-card:hover{transform:translateX(6px)}
+.active-reading{background:#fef08a!important;border-color:#eab308!important;transform:scale(1.02)}
+.tab-btn{transition:all .25s ease}
+.tab-btn.active{background:#16a34a;color:#fff;box-shadow:0 4px 12px rgba(22,163,74,.3)}
+@keyframes praise-b{0%,100%{transform:scale(1)}50%{transform:scale(1.15) rotate(2deg)}}
+.animate-praise{animation:praise-b .6s ease-in-out}
+@keyframes install-pulse{0%,100%{box-shadow:0 0 0 0 rgba(220,38,38,.7)}50%{box-shadow:0 0 0 10px rgba(220,38,38,0)}}
+.install-pulse{animation:install-pulse 2s infinite}
+.word-card-item{cursor:pointer;transition:all .3s;position:relative;overflow:hidden;}
+.word-card-item:active{transform:scale(.96)}
+.word-card-item .speaker-badge{position:absolute;top:8px;right:8px;background:rgba(255,255,255,.3);border-radius:50%;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-size:14px;}
+@keyframes card-speak{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+.word-card-item.speaking{animation:card-speak 1s ease-in-out}
+.compound-box{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;background:#fff;border:2px solid #16a34a;border-radius:10px;padding:6px 12px;min-width:52px;}
+.compound-box .bn{font-size:22px;font-weight:900;color:#14532d;line-height:1;font-family:'Galada',cursive}
+.compound-box .lbl{font-size:9px;color:#64748b;font-weight:700;margin-top:2px}
+
+/* ═══ SIDEBAR ═══ */
+#settingsFab{position:fixed;top:14px;right:14px;z-index:80;width:52px;height:52px;border-radius:16px;background:linear-gradient(135deg,#16a34a,#dc2626);color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 8px 22px rgba(22,163,74,.5),0 0 0 3px rgba(255,255,255,.3);cursor:pointer;transition:all .3s;border:none;}
+#settingsFab:hover{transform:scale(1.08) rotate(6deg);}
+#settingsFab.open{background:linear-gradient(135deg,#dc2626,#f43f5e);transform:rotate(90deg);}
+#settingsFab .fab-badge{position:absolute;top:-4px;right:-4px;background:#f59e0b;color:#0f172a;font-size:9px;font-weight:900;padding:2px 6px;border-radius:8px;animation:install-pulse 2s infinite;}
+@media (max-width:480px){#settingsFab{width:46px;height:46px;top:10px;right:10px;font-size:19px;border-radius:14px;}}
+#drawerBackdrop{position:fixed;inset:0;z-index:75;background:rgba(15,23,42,.55);backdrop-filter:blur(4px);opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s;}
+#drawerBackdrop.open{opacity:1;visibility:visible;}
+#settingsDrawer{position:fixed;top:0;right:0;bottom:0;width:min(340px,88vw);z-index:85;background:linear-gradient(180deg,#fff,#f0fdf4);box-shadow:-10px 0 40px rgba(22,163,74,.3);transform:translateX(105%);transition:transform .35s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;overflow:hidden;}
+#settingsDrawer.open{transform:translateX(0);}
+@media (max-width:480px){#settingsDrawer{width:92vw;}}
+.drawer-head{background:linear-gradient(135deg,#16a34a,#dc2626);color:#fff;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;border-bottom:3px solid #f59e0b;flex-shrink:0;}
+.drawer-head h3{font-family:'Galada',cursive;font-size:20px;}
+.drawer-close{background:rgba(255,255,255,.2);border:none;color:#fff;width:36px;height:36px;border-radius:12px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;}
+.drawer-close:hover{background:rgba(255,255,255,.35);transform:rotate(90deg);}
+.drawer-body{flex:1;overflow-y:auto;padding:16px 14px 20px;display:flex;flex-direction:column;gap:14px;}
+.drawer-section{background:#fff;border:2px solid #bbf7d0;border-radius:16px;padding:12px;}
+.drawer-section-title{font-size:11px;font-weight:800;color:#15803d;letter-spacing:1px;text-transform:uppercase;margin-bottom:9px;display:flex;align-items:center;gap:6px;}
+.drawer-btn{width:100%;display:flex;align-items:center;gap:10px;padding:11px 13px;border-radius:12px;font-weight:700;font-size:14px;cursor:pointer;border:none;text-align:left;transition:all .2s;margin-bottom:7px;color:#fff;}
+.drawer-btn:hover{transform:translateX(-3px);}
+.drawer-btn i{width:22px;text-align:center;font-size:16px;}
+.drawer-btn .btn-label{flex:1;}
+.btn-sky{background:linear-gradient(135deg,#0ea5e9,#0284c7);}
+.btn-emerald{background:linear-gradient(135deg,#16a34a,#15803d);}
+.btn-orange{background:linear-gradient(135deg,#f97316,#ea580c);}
+.btn-purple{background:linear-gradient(135deg,#9333ea,#7c3aed);}
+.btn-pink{background:linear-gradient(135deg,#ec4899,#db2777);}
+.btn-teal{background:linear-gradient(135deg,#14b8a6,#0d9488);}
+.btn-slate{background:linear-gradient(135deg,#475569,#334155);}
+.drawer-toggle{display:flex;align-items:center;justify-content:space-between;padding:11px 13px;border-radius:12px;background:#f0fdf4;border:2px solid #bbf7d0;cursor:pointer;}
+.drawer-toggle .toggle-left{display:flex;align-items:center;gap:9px;font-weight:700;font-size:13px;color:#0f172a;}
+.drawer-toggle .toggle-left i{font-size:16px;color:#16a34a;width:20px;text-align:center;}
+.drawer-toggle input[type="checkbox"]{appearance:none;-webkit-appearance:none;width:44px;height:24px;border-radius:12px;background:#cbd5e1;position:relative;cursor:pointer;transition:background .25s;flex-shrink:0;}
+.drawer-toggle input[type="checkbox"]::after{content:'';position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:50%;background:#fff;transition:transform .25s;}
+.drawer-toggle input[type="checkbox"]:checked{background:#16a34a;}
+.drawer-toggle input[type="checkbox"]:checked::after{transform:translateX(20px);}
+.drawer-select{width:100%;padding:10px 12px;border-radius:12px;background:#f0fdf4;border:2px solid #bbf7d0;font-weight:700;font-size:14px;font-family:inherit;}
+.drawer-info{background:linear-gradient(135deg,#fee2e2,#fecaca);border:2px solid #dc2626;border-radius:14px;padding:12px;text-align:center;}
+.drawer-info .nctb{display:inline-block;background:#0f172a;color:#fbbf24;font-weight:900;font-size:12px;padding:3px 12px;border-radius:10px;letter-spacing:1px;}
+.drawer-info p{font-size:10px;color:#7f1d1d;font-weight:700;margin-top:6px;}
+.drawer-footer{flex-shrink:0;padding:12px 14px;background:linear-gradient(180deg,transparent,#dcfce7);border-top:1px solid #bbf7d0;text-align:center;font-size:10px;color:#15803d;font-weight:700;}
+#tabNav{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:6px;padding:3px 2px 8px;-webkit-overflow-scrolling:touch;}
+#tabNav::-webkit-scrollbar{height:4px;}
+#tabNav::-webkit-scrollbar-thumb{background:rgba(255,255,255,.5);border-radius:10px;}
+#tabNav .tab-btn{white-space:nowrap;flex-shrink:0;}
+@media (min-width:768px){#tabNav{flex-wrap:wrap;justify-content:center;overflow-x:visible;}}
+#printArea{display:none}
+@media print{
+  @page{size:A4 portrait;margin:1.2cm 1.3cm}
+  html,body{background:#fff!important;padding:0!important;margin:0!important}
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  #appContainer,#settingsFab,#drawerBackdrop,#settingsDrawer{display:none!important}
+  .no-print{display:none!important}
+  #printModal,#installModal{display:none!important}
+  #printArea{display:block!important}
+  .pr-page{font-family:'Hind Siliguri',sans-serif;color:#0f172a;font-size:11.5pt;line-height:1.65}
+  .pr-head{text-align:center;border-bottom:3px solid #16a34a;padding-bottom:7px;margin-bottom:12px}
+  .pr-head h1{font-family:'Galada',cursive;font-size:21pt;color:#14532d;margin:3px 0 6px 0}
+  .pr-kicker{font-size:9pt;font-weight:700;color:#15803d;}
+  .pr-meta{display:flex;justify-content:space-between;gap:10px;font-size:10pt;font-weight:600;flex-wrap:wrap}
+  .pr-name{margin-top:7px;font-size:10pt;font-weight:600;text-align:left}
+  .pr-sec{margin-top:13px;page-break-inside:avoid}
+  .pr-sec>h2{font-size:12.5pt;color:#fff;background:#16a34a;padding:4px 9px;border-radius:5px;margin-bottom:7px;font-weight:700}
+  .pr-ol{margin:0;padding-left:20px}
+  .pr-ol li{margin-bottom:4px;font-weight:600}
+  .pr-table{width:100%;border-collapse:collapse;margin-top:4px;font-size:10.5pt}
+  .pr-table th{background:#dcfce7;color:#14532d;border:1px solid #86efac;padding:5px 7px;text-align:left;font-weight:700}
+  .pr-table td{border:1px solid #bbf7d0;padding:5px 7px;font-weight:600}
+  .pr-q{margin-bottom:9px;padding:6px 9px;border:1px dashed #94a3b8;border-radius:7px;page-break-inside:avoid}
+  .pr-opts{margin-left:20px;font-size:10pt;font-weight:600;color:#15803d}
+  .pr-tf{margin-left:20px;font-size:10.5pt;font-weight:600}
+  .pr-box{display:inline-block;width:12px;height:12px;border:1.4px solid #0f172a;margin:0 3px 0 10px;vertical-align:-2px}
+  .pr-ans{color:#047857;font-weight:700}
+  .pr-foot{margin-top:16px;border-top:2px solid #cbd5e1;padding-top:6px;text-align:center;font-size:8.5pt;color:#64748b;font-weight:600}
+  .pr-pagebreak{page-break-before:always}
+  .pr-emoji-row{font-size:20pt;letter-spacing:10px;margin:3px 0 5px 0;text-align:center}
+  .pr-emoji-line{font-size:16pt;text-align:center;letter-spacing:6px;margin:2px 0}
+  .wc-print-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr 1fr;gap:6mm;height:250mm;margin-top:5mm;}
+  .wc-print-card{border:3px dashed #16a34a;border-radius:14px;background:linear-gradient(135deg,#f0fdf4,#dcfce7);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:6mm 4mm 14mm 4mm;page-break-inside:avoid;position:relative;}
+  .wc-print-card .wc-icon{font-size:52pt;line-height:1;margin-bottom:3mm}
+  .wc-print-card .wc-name{font-size:30pt;font-weight:900;color:#14532d;font-family:'Galada',cursive}
+  .wc-print-card .wc-en{font-size:11pt;color:#15803d;font-weight:700;margin-top:2mm}
+  .wc-print-card .wc-cut{position:absolute;bottom:4mm;left:5mm;right:5mm;font-size:8pt;color:#94a3b8;text-align:center}
+}
+</style>
+</head>
+<body class="p-2 sm:p-4 md:p-6 text-gray-800">
+
+<button id="settingsFab" onclick="toggleDrawer()"><i class="fas fa-sliders" id="fabIcon"></i><span class="fab-badge">⚙️</span></button>
+<div id="drawerBackdrop" onclick="closeDrawer()"></div>
+
+<aside id="settingsDrawer">
+  <div class="drawer-head">
+    <div><h3>⚙️ কন্ট্রোল প্যানেল</h3><p style="font-size:10px;opacity:.9;font-weight:600;margin-top:2px;">শব্দ, ডাউনলোড ও অন্যান্য</p></div>
+    <button class="drawer-close" onclick="closeDrawer()"><i class="fas fa-xmark"></i></button>
+  </div>
+  <div class="drawer-body">
+    <div class="drawer-section">
+      <div class="drawer-section-title"><i class="fas fa-volume-high"></i> শব্দ ও ভয়েস</div>
+      <button class="drawer-btn btn-sky" onclick="toggleAudio();updateDrawerSound();"><i class="fas fa-volume-up" id="drawerSoundIcon"></i><span class="btn-label" id="drawerSoundText">শব্দ চালু আছে</span></button>
+      <div style="margin-top:7px;">
+        <label style="font-size:11px;font-weight:800;color:#15803d;display:block;margin-bottom:5px;">🎚️ পড়ার গতি</label>
+        <select id="speechRateSelect" onchange="changeSpeechRate(this.value)" class="drawer-select">
+          <option value="0.6">🐢 ধীরে</option>
+          <option value="0.8" selected>🚶 স্বাভাবিক</option>
+          <option value="1.0">🏃 দ্রুত</option>
+        </select>
+      </div>
+    </div>
+    <div class="drawer-section">
+      <div class="drawer-section-title"><i class="fas fa-file-export"></i> প্রিন্ট ও এক্সপোর্ট</div>
+      <button class="drawer-btn btn-emerald" onclick="openPrintModal();closeDrawer();"><i class="fas fa-print"></i><span class="btn-label">প্রিন্ট কার্যপত্র</span></button>
+      <button class="drawer-btn btn-orange" onclick="downloadPPT();"><i class="fas fa-file-powerpoint"></i><span class="btn-label" id="pptBtnText">পাওয়ারপয়েন্ট (PPT)</span></button>
+      <button class="drawer-btn btn-purple" onclick="downloadHTML();closeDrawer();"><i class="fas fa-download"></i><span class="btn-label">HTML ডাউনলোড</span></button>
+    </div>
+    <div class="drawer-section">
+      <div class="drawer-section-title"><i class="fas fa-mobile-screen"></i> অ্যাপ ইনস্টল</div>
+      <button id="installBtn" class="drawer-btn btn-pink install-pulse" onclick="handleInstallClick();"><i class="fas fa-circle-down"></i><span class="btn-label" id="installBtnText">কম্পিউটার/মোবাইলে ইনস্টল</span></button>
+    </div>
+    <div class="drawer-section">
+      <div class="drawer-section-title"><i class="fas fa-user-graduate"></i> শিশুর নাম</div>
+      <input type="text" id="childNameInput" placeholder="এখানে শিশুর নাম লিখো..." maxlength="20" class="drawer-select" oninput="saveChildName(this.value)">
+      <div style="margin-top:7px;"><button class="drawer-btn btn-slate" style="margin-bottom:0;font-size:12px;padding:9px;" onclick="clearChildName();document.getElementById('childNameInput').value='';"><i class="fas fa-eraser"></i><span class="btn-label">নাম মুছো</span></button></div>
+    </div>
+    <div class="drawer-section">
+      <div class="drawer-section-title"><i class="fas fa-microphone-lines"></i> প্রশ্ন ভয়েস</div>
+      <label class="drawer-toggle">
+        <span class="toggle-left"><i class="fas fa-volume-high"></i><span>প্রশ্ন পড়ে শোনাবে</span></span>
+        <input type="checkbox" id="questionVoiceToggle" checked onchange="toggleQuestionVoice(this.checked)">
+      </label>
+    </div>
+    <div class="drawer-info"><span class="nctb">NCTB</span><p>জাতীয় শিক্ষাক্রম ও পাঠ্যপুস্তক বোর্ড<br>আমার বাংলা বই • প্রথম শ্রেণি</p></div>
+  </div>
+  <div class="drawer-footer">🎨 পরিকল্পনা ও ডিজাইনে: <strong>মো: সাইফুল্লাহ সরওয়ার</strong> ⭐</div>
+</aside>
+
+<div id="appContainer" class="max-w-6xl mx-auto bg-white/95 backdrop-blur-md rounded-3xl shadow-2xl overflow-hidden border-4 border-green-200">
+
+<header class="bg-gradient-to-r from-green-700 via-green-600 to-red-600 p-4 sm:p-6 text-white text-center relative overflow-hidden shadow-md">
+  <div class="absolute -top-6 -left-6 w-28 h-28 bg-white/10 rounded-full blur-xl"></div>
+  <div class="absolute -bottom-6 -right-6 w-36 h-36 bg-amber-300/20 rounded-full blur-xl"></div>
+  <div class="relative z-10 flex items-center justify-start gap-3 pr-16">
+    <span class="text-4xl sm:text-6xl animate-float">🇧🇩</span>
+    <div class="text-left">
+      <div class="flex items-center gap-2 flex-wrap">
+        <span class="bg-amber-300 text-green-950 text-xs font-black px-3 py-0.5 rounded-full uppercase tracking-wider">পাঠ ৫২</span>
+        <span class="text-xs text-green-100 font-semibold">আমার বাংলা বই • ১ম শ্রেণি</span>
+        <span class="text-[10px] bg-white/20 px-2 py-0.5 rounded-full font-bold">পৃষ্ঠা ৭৭-৭৮</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-title text-amber-200 tracking-wide drop-shadow-md mt-0.5">আমাদের মুক্তিযুদ্ধ</h1>
+      <div id="headerGreeting" class="mt-2 inline-flex items-center gap-2 bg-gradient-to-r from-amber-400 via-pink-500 to-rose-500 text-white text-xs sm:text-sm font-black px-4 py-1 rounded-full shadow-lg border border-white/40">
+        <span>✨</span>
+        <span>পরিকল্পনা ও ডিজাইনে: <strong class="text-yellow-200 text-sm sm:text-base font-extrabold">মো: সাইফুল্লাহ সরওয়ার</strong></span>
+        <span>👑</span>
+      </div>
+    </div>
+  </div>
+
+  <nav id="tabNav" class="mt-5 border-t border-white/20 pt-3">
+    <button onclick="switchTab('reading')" id="tab-reading" class="tab-btn active px-3 py-2 rounded-2xl text-xs sm:text-sm font-bold flex items-center gap-1.5 bg-green-100 text-green-900"><span>📖</span> পাঠ</button>
+    <button onclick="switchTab('pathgame')" id="tab-pathgame" class="tab-btn px-3 py-2 rounded-2xl text-xs sm:text-sm font-bold flex items-center gap-1.5 bg-gradient-to-r from-red-600 to-amber-500 text-white shadow-md"><span>🎯</span> মুক্তিযোদ্ধার পথ</button>
+    <button onclick="switchTab('words')" id="tab-words" class="tab-btn px-3 py-2 rounded-2xl text-xs sm:text-sm font-bold flex items-center gap-1.5 bg-emerald-500 text-white shadow-md"><span>📚</span> শব্দ শিখি</button>
+    <button onclick="switchTab('dates')" id="tab-dates" class="tab-btn px-3 py-2 rounded-2xl text-xs sm:text-sm font-bold flex items-center gap-1.5 bg-red-600 text-white shadow-md"><span>📅</span> জেনে রাখি</button>
+    <button onclick="switchTab('compound')" id="tab-compound" class="tab-btn px-3 py-2 rounded-2xl text-xs sm:text-sm font-bold flex items-center gap-1.5 bg-indigo-500 text-white shadow-md"><span>🔤</span> যুক্তবর্ণ</button>
+    <button onclick="switchTab('cardgame')" id="tab-cardgame" class="tab-btn px-3 py-2 rounded-2xl text-xs sm:text-sm font-bold flex items-center gap-1.5 bg-amber-400 text-green-950 shadow-md"><span>🎴</span> কার্ড মিলাও</button>
+    <button onclick="switchTab('exercises')" id="tab-exercises" class="tab-btn px-3 py-2 rounded-2xl text-xs sm:text-sm font-bold flex items-center gap-1.5 bg-green-100/50 text-white hover:bg-green-100/80 hover:text-green-900"><span>✍️</span> অনুশীলন</button>
+    <button onclick="switchTab('guide')" id="tab-guide" class="tab-btn px-3 py-2 rounded-2xl text-xs sm:text-sm font-bold flex items-center gap-1.5 bg-teal-400 text-teal-950 shadow-md"><span>👨‍🏫</span> গাইড</button>
+  </nav>
+</header>
+
+<main class="p-3 sm:p-6 md:p-8 space-y-8">
+
+<!-- READING -->
+<section id="section-reading" class="space-y-6">
+  <div class="bg-gradient-to-br from-green-50 via-emerald-50 to-red-50 rounded-3xl p-4 sm:p-6 border-4 border-green-300 shadow-lg relative overflow-hidden">
+    <div class="bubble w-4 h-4 left-8 bottom-0"></div>
+    <div class="bubble w-6 h-6 left-1/3 bottom-0" style="animation-delay:1.5s"></div>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+      <div class="lg:col-span-5 flex flex-col items-center">
+        <div class="w-full bg-gradient-to-b from-amber-100 via-orange-100 to-green-100 rounded-3xl p-3 border-4 border-white shadow-xl relative overflow-hidden">
+          <svg viewBox="0 0 320 220" class="w-full h-56 rounded-2xl">
+            <defs>
+              <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#fef3c7"/>
+                <stop offset="40%" stop-color="#fbbf24"/>
+                <stop offset="100%" stop-color="#16a34a"/>
+              </linearGradient>
+              <radialGradient id="sunG"><stop offset="0%" stop-color="#fef9c3"/><stop offset="60%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#dc2626"/></radialGradient>
+            </defs>
+            <rect width="320" height="220" fill="url(#skyG)"/>
+            <g transform="translate(160, 120)">
+              <g class="ray-spin" opacity=".6">
+                <line x1="0" y1="-70" x2="0" y2="-85" stroke="#fef08a" stroke-width="3" stroke-linecap="round"/>
+                <line x1="0" y1="70" x2="0" y2="85" stroke="#fef08a" stroke-width="3" stroke-linecap="round"/>
+                <line x1="-70" y1="0" x2="-85" y2="0" stroke="#fef08a" stroke-width="3" stroke-linecap="round"/>
+                <line x1="70" y1="0" x2="85" y2="0" stroke="#fef08a" stroke-width="3" stroke-linecap="round"/>
+              </g>
+              <circle r="55" fill="url(#sunG)" opacity=".95"/>
+            </g>
+            <path d="M0 175 Q160 165 320 175 L320 220 L0 220 Z" fill="#16a34a"/>
+            <path d="M0 190 Q160 180 320 190 L320 220 L0 220 Z" fill="#15803d"/>
+            <rect x="58" y="60" width="3" height="140" fill="#78350f"/>
+            <g class="flag-wave">
+              <rect x="61" y="62" width="90" height="55" fill="#16a34a" rx="2"/>
+              <circle cx="106" cy="89" r="20" fill="#dc2626"/>
+            </g>
+            <text x="160" y="210" text-anchor="middle" font-family="Hind Siliguri" font-size="11" font-weight="900" fill="#14532d">১৯৭১ • স্বাধীনতা • বিজয়</text>
+          </svg>
+        </div>
+        <div class="mt-4 flex flex-wrap gap-2 w-full justify-center">
+          <button onclick="readEntirePassage()" class="bg-gradient-to-r from-green-600 to-emerald-600 text-white font-bold px-5 py-2.5 rounded-2xl shadow-lg flex items-center gap-2 text-sm">
+            <i id="playIcon" class="fas fa-volume-up"></i><span id="playBtnText">পুরো পাঠ শোনো 🔊</span>
+          </button>
+          <button onclick="stopAudio()" class="bg-slate-200 text-slate-700 font-bold px-4 py-2.5 rounded-2xl text-xs"><i class="fas fa-stop"></i> থামো</button>
+        </div>
+      </div>
+      <div class="lg:col-span-7 space-y-2">
+        <div class="flex items-center justify-between mb-2 border-b border-green-200 pb-2">
+          <h2 class="text-lg sm:text-xl font-bold text-green-900 flex items-center gap-2"><span>📖</span> শুনি ও পড়ি:</h2>
+          <span class="text-xs bg-green-200 text-green-900 font-bold px-2.5 py-1 rounded-full" id="sentenceCount">১৩টি বাক্য</span>
+        </div>
+        <div id="passageContainer" class="space-y-2 text-base sm:text-lg font-semibold text-slate-800"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl p-4 sm:p-6 border-4 border-amber-200 shadow-lg">
+    <div class="flex items-center justify-between mb-4">
+      <h3 class="text-lg sm:text-2xl font-bold text-amber-950 flex items-center gap-2 font-title"><span>🔍</span> মূল শব্দ ও তাদের অর্থ</h3>
+    </div>
+    <div id="wordExplorerGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3"></div>
+  </div>
+</section>
+
+<!-- ═══════════════ PATH GAME (NEW) ═══════════════ -->
+<section id="section-pathgame" class="hidden space-y-4">
+  <div class="bg-gradient-to-r from-red-700 via-red-600 to-amber-500 rounded-3xl p-4 sm:p-5 text-white shadow-xl border-4 border-amber-300">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="bg-white/25 text-xs font-black px-2.5 py-0.5 rounded-full">🎯 নতুন গেম</span>
+          <span class="text-xs text-amber-100">১৯৭১ — মুক্তিযোদ্ধার যাত্রা</span>
+        </div>
+        <h3 class="text-2xl sm:text-3xl font-title text-amber-100 mt-1">মুক্তিযোদ্ধার পথ 🎖️</h3>
+        <p class="text-xs text-amber-100 mt-1">প্রশ্নের সঠিক উত্তর দিয়ে মুক্তিযোদ্ধাকে ৯ মাসের পথ দেখাও — ১৬ ডিসেম্বর বিজয় হবে!</p>
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="bg-white/20 backdrop-blur px-4 py-2 rounded-2xl text-center border border-white/30">
+          <span class="text-[10px] uppercase block text-amber-100 font-bold">স্কোর</span>
+          <span id="pgScoreText" class="text-2xl font-black text-amber-100">০</span>
+        </div>
+        <button onclick="restartPathGame()" class="bg-white/25 hover:bg-white/35 text-white font-black px-4 py-3 rounded-2xl shadow-lg active:scale-95 text-sm flex items-center gap-1.5 border border-white/30">
+          <i class="fas fa-rotate-right"></i> নতুন
+        </button>
+      </div>
+    </div>
+
+    <div class="mt-4 bg-red-900/60 backdrop-blur rounded-2xl p-3 sm:p-4 border border-amber-300/50 space-y-3">
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3">
+        <label class="text-xs text-amber-200 font-bold flex items-center gap-2 shrink-0"><i class="fas fa-user-graduate"></i> শিশুর নাম:</label>
+        <input type="text" id="childNameInputGame" placeholder="এখানে নাম লিখো..." maxlength="20" class="flex-1 bg-white/95 text-red-950 font-bold px-3 py-2 rounded-xl border-2 border-amber-300 focus:border-amber-500 focus:outline-none text-sm placeholder:text-amber-400" oninput="saveChildName(this.value); syncNameInputs(this.value);">
+        <button onclick="clearChildName();syncNameInputs('');" class="bg-white/20 hover:bg-white/30 text-amber-100 text-xs font-bold px-3 py-2 rounded-xl shrink-0"><i class="fas fa-eraser"></i> মুছো</button>
+      </div>
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-2 bg-red-800/50 rounded-xl p-2.5 border border-amber-300/30">
+        <div class="text-center sm:text-left flex-1">
+          <span class="text-xs text-amber-300 font-bold block">🎯 প্রশ্ন:</span>
+          <span id="pgQuestion" class="text-base sm:text-xl font-black text-white">পথযাত্রা শুরু করো!</span>
+        </div>
+        <button onclick="repeatPathQuestion()" class="bg-amber-300/30 hover:bg-amber-300/50 text-amber-100 text-xs font-bold px-3 py-2 rounded-xl border border-amber-200/40 shrink-0">
+          <i class="fas fa-volume-up"></i> আবার শোনো
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="relative w-full overflow-hidden rounded-3xl shadow-2xl border-4 border-amber-300">
+    <canvas id="pathCanvas" class="w-full h-[450px] sm:h-[540px] block cursor-pointer"></canvas>
+    <div id="pgOverlay" class="absolute inset-0 bg-red-950/80 backdrop-blur-sm hidden flex-col items-center justify-center text-white text-center p-6 space-y-4 z-20">
+      <div class="text-6xl animate-bounce">🇧🇩</div>
+      <h3 class="text-3xl font-title text-amber-300">১৬ই ডিসেম্বর — বিজয়!</h3>
+      <p id="pgOverlayMsg" class="text-lg text-amber-100 font-medium max-w-md">মুক্তিযোদ্ধারা নয় মাস যুদ্ধ করে বিজয় এনেছে!</p>
+      <button onclick="restartPathGame()" class="bg-gradient-to-r from-amber-400 to-amber-500 text-red-950 font-black px-8 py-3 rounded-2xl text-lg shadow-xl active:scale-95">আবার খেলো 🎖️</button>
+    </div>
+  </div>
+</section>
+
+<!-- WORDS -->
+<section id="section-words" class="hidden space-y-6">
+  <div class="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-3xl p-5 text-white shadow-xl border-4 border-emerald-300">
+    <h2 class="text-2xl sm:text-4xl font-title text-amber-200">📚 শব্দ ও অর্থ</h2>
+    <p class="text-xs text-emerald-100 mt-2">প্রতিটি কার্ডে <strong>শব্দ, বর্ণ বিশ্লেষণ ও অর্থ</strong>।</p>
+  </div>
+  <div id="wordCardsGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+  <div class="bg-emerald-50 rounded-3xl p-5 border-4 border-emerald-200 shadow-md space-y-3">
+    <h3 class="text-lg font-black text-emerald-950">🖨️ A4 পেজে ৬টি কার্ড প্রিন্ট</h3>
+    <button onclick="printWordCards()" class="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-black py-3 rounded-2xl shadow-lg active:scale-95 flex items-center justify-center gap-2">
+      <i class="fas fa-print"></i> 🎴 কার্ড প্রিন্ট করো
+    </button>
+  </div>
+</section>
+
+<!-- DATES -->
+<section id="section-dates" class="hidden space-y-6">
+  <div class="bg-gradient-to-r from-red-600 to-amber-500 rounded-3xl p-5 text-white shadow-xl border-4 border-red-300">
+    <h2 class="text-2xl sm:text-4xl font-title text-amber-100">📅 জেনে রাখি — দুটি মহান দিন</h2>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+    <div onclick="speakDate(0)" class="cursor-pointer bg-gradient-to-br from-green-500 to-emerald-600 rounded-3xl p-6 text-white shadow-2xl border-4 border-white/40 hover:scale-105 transition">
+      <div class="flex items-center justify-between">
+        <span class="bg-amber-300 text-green-950 text-xs font-black px-3 py-1 rounded-full">🇧🇩 স্বাধীনতা দিবস</span>
+        <span class="text-3xl">🌅</span>
+      </div>
+      <div class="text-5xl sm:text-6xl font-title font-black text-amber-200 mt-3">২৬শে মার্চ</div>
+      <p class="text-sm font-bold text-green-50 mt-3">এই দিনে আমাদের দেশের মানুষ যুদ্ধ শুরু করে দেশকে স্বাধীন করার জন্য।</p>
+    </div>
+    <div onclick="speakDate(1)" class="cursor-pointer bg-gradient-to-br from-red-600 to-red-800 rounded-3xl p-6 text-white shadow-2xl border-4 border-white/40 hover:scale-105 transition">
+      <div class="flex items-center justify-between">
+        <span class="bg-amber-300 text-red-950 text-xs font-black px-3 py-1 rounded-full">🇧🇩 বিজয় দিবস</span>
+        <span class="text-3xl">🏆</span>
+      </div>
+      <div class="text-5xl sm:text-6xl font-title font-black text-amber-200 mt-3">১৬ই ডিসেম্বর</div>
+      <p class="text-sm font-bold text-red-50 mt-3">এই দিনে পাকিস্তানিরা হেরে যায়, মুক্তিযোদ্ধারা জয়ী হন — বাংলাদেশ স্বাধীন হয়।</p>
+    </div>
+  </div>
+
+  <div class="bg-white rounded-3xl p-5 border-4 border-amber-200 shadow-md space-y-3">
+    <h3 class="text-lg font-black text-amber-950">🕰️ মুক্তিযুদ্ধের মূল ঘটনাপ্রবাহ</h3>
+    <div class="space-y-3">
+      <div onclick="speakEvent(0)" class="cursor-pointer flex items-center gap-3 bg-red-50 hover:bg-red-100 border-2 border-red-200 rounded-2xl p-3"><div class="w-12 h-12 bg-red-500 text-white rounded-xl flex items-center justify-center font-black">২৫</div><div class="flex-1"><p class="font-black text-red-950 text-sm">২৫শে মার্চ ১৯৭১ — কালো রাত</p><p class="text-xs text-red-800">পাকিস্তানি মিলিটারি আমাদের ওপর হামলা করে।</p></div></div>
+      <div onclick="speakEvent(1)" class="cursor-pointer flex items-center gap-3 bg-green-50 hover:bg-green-100 border-2 border-green-200 rounded-2xl p-3"><div class="w-12 h-12 bg-green-500 text-white rounded-xl flex items-center justify-center font-black">২৬</div><div class="flex-1"><p class="font-black text-green-950 text-sm">২৬শে মার্চ ১৯৭১ — যুদ্ধ শুরু</p><p class="text-xs text-green-800">এদেশের মানুষ দেশের জন্য যুদ্ধ শুরু করে।</p></div></div>
+      <div onclick="speakEvent(2)" class="cursor-pointer flex items-center gap-3 bg-amber-50 hover:bg-amber-100 border-2 border-amber-200 rounded-2xl p-3"><div class="w-12 h-12 bg-amber-500 text-white rounded-xl flex items-center justify-center font-black">৯</div><div class="flex-1"><p class="font-black text-amber-950 text-sm">৯ মাস যুদ্ধ চলে</p><p class="text-xs text-amber-800">মুক্তিযোদ্ধারা অনেক কষ্ট করেন। অনেকে শহিদ হন।</p></div></div>
+      <div onclick="speakEvent(3)" class="cursor-pointer flex items-center gap-3 bg-red-50 hover:bg-red-100 border-2 border-red-200 rounded-2xl p-3"><div class="w-12 h-12 bg-red-500 text-white rounded-xl flex items-center justify-center font-black">১৬</div><div class="flex-1"><p class="font-black text-red-950 text-sm">১৬ই ডিসেম্বর ১৯৭১ — বিজয়</p><p class="text-xs text-red-800">পাকিস্তানিরা হেরে যায় — বাংলাদেশ স্বাধীন হয়।</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPOUND -->
+<section id="section-compound" class="hidden space-y-6">
+  <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl p-5 text-white shadow-xl border-4 border-indigo-300">
+    <h3 class="text-2xl sm:text-3xl font-title text-amber-300">🔤 যুক্তবর্ণ শিখি</h3>
+    <p class="text-sm text-indigo-100 mt-2">দুটি বর্ণ মিলে যুক্তবর্ণ তৈরি হয়!</p>
+  </div>
+  <div id="compoundGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+</section>
+
+<!-- CARD GAME -->
+<section id="section-cardgame" class="hidden space-y-4">
+  <div class="bg-gradient-to-r from-amber-500 to-red-500 rounded-3xl p-4 sm:p-5 text-white shadow-xl border-4 border-amber-300">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div>
+        <h3 class="text-2xl sm:text-3xl font-title text-amber-100">🎴 কার্ড মিলাও!</h3>
+        <p class="text-xs text-amber-100 mt-1">প্রশ্ন ও উত্তর জোড়া মিলাও!</p>
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="bg-white/20 px-4 py-2 rounded-2xl text-center border border-white/30">
+          <span class="text-[10px] uppercase block text-amber-100 font-bold">স্কোর</span>
+          <span id="cgScoreText" class="text-2xl font-black text-amber-100">০</span>
+        </div>
+        <button onclick="restartCardGame()" class="bg-white/25 hover:bg-white/35 text-white font-black px-4 py-3 rounded-2xl active:scale-95 text-sm"><i class="fas fa-rotate-right"></i> নতুন</button>
+      </div>
+    </div>
+    <div class="mt-4 bg-amber-900/60 backdrop-blur rounded-2xl p-3 border border-amber-300/50">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-2">
+        <div class="text-center sm:text-left flex-1">
+          <span class="text-xs text-amber-300 font-bold block">🎯 প্রশ্ন:</span>
+          <span id="cgQuestion" class="text-base sm:text-xl font-black text-white">সঠিক জোড়া খুঁজে বের করো!</span>
+        </div>
+        <button onclick="repeatCgQuestion()" class="bg-amber-300/30 text-amber-100 text-xs font-bold px-3 py-2 rounded-xl border border-amber-200/40"><i class="fas fa-volume-up"></i> আবার শোনো</button>
+      </div>
+    </div>
+  </div>
+  <div class="bg-gradient-to-br from-amber-50 to-red-50 rounded-3xl p-4 border-4 border-amber-300 shadow-lg">
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3" id="cgBoard"></div>
+  </div>
+  <div id="cgOverlay" class="hidden fixed inset-0 z-[60] bg-amber-950/75 backdrop-blur-sm flex-col items-center justify-center text-white text-center p-6 space-y-4">
+    <div class="text-6xl animate-bounce">🎉</div>
+    <h3 class="text-3xl font-title text-amber-300">সব জোড়া মিলেছে!</h3>
+    <p id="cgOverlayMsg" class="text-lg text-amber-100">তুমি সব প্রশ্নের সঠিক উত্তর মিলিয়েছ!</p>
+    <button onclick="restartCardGame()" class="bg-amber-400 text-amber-950 font-black px-8 py-3 rounded-2xl text-lg shadow-xl">আবার খেলো 🎴</button>
+  </div>
+</section>
+
+<!-- EXERCISES -->
+<section id="section-exercises" class="hidden space-y-8">
+  <div class="bg-gradient-to-r from-amber-400 to-yellow-400 p-4 rounded-3xl shadow-lg border-2 border-amber-500 flex items-center justify-between gap-4 flex-wrap">
+    <div class="flex items-center gap-3"><span class="text-3xl">🏆</span><h3 class="text-lg font-black text-amber-950">তোমার অনুশীলনী স্কোর</h3></div>
+    <div class="flex items-center gap-4 bg-white/90 px-5 py-2 rounded-2xl shadow-inner">
+      <div class="text-center"><span class="text-xs text-gray-500 font-bold block">মোট</span><span id="exerciseScore" class="text-2xl font-black text-amber-600">০</span></div>
+      <div id="starBadge" class="text-2xl">⭐ ⭐ ⭐</div>
+      <button onclick="resetExercises()" class="bg-rose-500 text-white text-xs font-black px-3 py-1.5 rounded-xl"><i class="fas fa-rotate-left"></i> আবার</button>
+    </div>
+  </div>
+
+  <div class="bg-white rounded-3xl p-4 border-4 border-green-200 shadow-md space-y-4">
+    <h3 class="text-lg font-bold text-green-950 border-b border-green-100 pb-3">✍️ অনুশীলন ১: শূন্যস্থান পূরণ</h3>
+    <div id="fillBlanksContainer" class="space-y-4"></div>
+  </div>
+  <div class="bg-white rounded-3xl p-4 border-4 border-emerald-200 shadow-md space-y-4">
+    <h3 class="text-lg font-bold text-emerald-950 border-b border-emerald-100 pb-3">✅ অনুশীলন ২: সত্য নাকি মিথ্যা?</h3>
+    <div id="trueFalseContainer" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+  </div>
+  <div class="bg-white rounded-3xl p-4 border-4 border-red-200 shadow-md space-y-4">
+    <h3 class="text-lg font-bold text-red-950 border-b border-red-100 pb-3">📅 অনুশীলন ৩: তারিখ মিলাও</h3>
+    <div id="dateMatchContainer" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+  </div>
+  <div class="bg-white rounded-3xl p-4 border-4 border-amber-200 shadow-md space-y-4">
+    <h3 class="text-lg font-bold text-amber-950 border-b border-amber-100 pb-3">🧩 অনুশীলন ৪: শব্দ সাজাও</h3>
+    <div id="unscrambleContainer" class="space-y-3"></div>
+  </div>
+</section>
+
+<!-- GUIDE -->
+<section id="section-guide" class="hidden space-y-6">
+  <div class="bg-gradient-to-r from-teal-500 to-emerald-600 rounded-3xl p-6 text-white shadow-xl border-4 border-emerald-300">
+    <h2 class="text-2xl sm:text-4xl font-title text-amber-200">🎓 পাঠদানের নির্দেশনা</h2>
+  </div>
+  <div class="bg-amber-50 border-2 border-amber-300 rounded-3xl p-5 shadow-md space-y-2">
+    <h3 class="text-lg font-black text-amber-950"><span>💝</span> শিক্ষকের প্রতি বিশেষ অনুরোধ</h3>
+    <ul class="space-y-2 text-sm text-amber-900 font-medium list-disc list-inside">
+      <li>এই পাঠে <strong>যুদ্ধের হিংস্রতা নয়, বীরত্ব ও দেশপ্রেমের বার্তা</strong> দিন।</li>
+      <li>শহিদ ও মুক্তিযোদ্ধাদের প্রতি <strong>সম্মান ও কৃতজ্ঞতা</strong> শেখান।</li>
+      <li>পরিবারের বড়দের কাছে মুক্তিযুদ্ধের গল্প শুনতে উৎসাহিত করুন।</li>
+      <li>শিশুর প্রশ্নের উত্তর দিন <strong>ভয় নয়, সাহস</strong> দিয়ে।</li>
+    </ul>
+  </div>
+  <div class="bg-white rounded-3xl p-6 border-4 border-emerald-200 shadow-lg space-y-5">
+    <h3 class="text-xl font-bold text-emerald-950 font-title border-b border-emerald-100 pb-3">⏱️ ৪০ মিনিটের ক্লাস পরিকল্পনা</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+      <div class="bg-green-50 p-4 rounded-2xl"><h5 class="font-black text-green-900">🎤 ধাপ ১ (৮ মি)</h5><p class="text-xs mt-1">ছবি দেখিয়ে পাঠ পরিচিতি।</p></div>
+      <div class="bg-emerald-50 p-4 rounded-2xl"><h5 class="font-black text-emerald-900">📖 ধাপ ২ (১০ মি)</h5><p class="text-xs mt-1">পাঠ পড়া ও শব্দ শেখা।</p></div>
+      <div class="bg-red-50 p-4 rounded-2xl"><h5 class="font-black text-red-900">🎯 ধাপ ৩ (১০ মি)</h5><p class="text-xs mt-1">মুক্তিযোদ্ধার পথ গেম খেলা।</p></div>
+      <div class="bg-amber-50 p-4 rounded-2xl"><h5 class="font-black text-amber-900">🎴 ধাপ ৪ (৭ মি)</h5><p class="text-xs mt-1">কার্ড মিলাও খেলা।</p></div>
+      <div class="bg-indigo-50 p-4 rounded-2xl md:col-span-2"><h5 class="font-black text-indigo-900">✍️ ধাপ ৫ (৫ মি)</h5><p class="text-xs mt-1">ডিজিটাল অনুশীলনী।</p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="bg-slate-100 p-5 text-center text-xs border-t border-gray-200 space-y-2">
+  <p class="font-bold text-green-800">NCTB • আমার বাংলা বই • প্রথম শ্রেণি • পাঠ ৫২ : আমাদের মুক্তিযুদ্ধ</p>
+  <p class="text-gray-400 text-[11px]">শিশুদের জন্য সহজ ও মজাদার ইন্টারঅ্যাকটিভ বাংলা ডিজিটাল শিক্ষামূলক অ্যাপ • ২০২৬</p>
+</footer>
+
+</div>
+
+<!-- PRINT MODAL -->
+<div id="printModal" class="no-print fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-[90] hidden items-center justify-center p-3 sm:p-4">
+  <div class="bg-white rounded-3xl max-w-xl w-full shadow-2xl overflow-hidden border-4 border-emerald-200 max-h-[92vh] flex flex-col">
+    <div class="bg-gradient-to-r from-emerald-600 to-teal-600 p-4 text-white flex items-center justify-between">
+      <h3 class="text-lg font-black">🖨️ প্রিন্ট উপকরণ</h3>
+      <button onclick="closePrintModal()" class="bg-white/20 w-9 h-9 rounded-full flex items-center justify-center"><i class="fas fa-xmark"></i></button>
+    </div>
+    <div class="p-4 overflow-y-auto space-y-3">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+        <label class="flex items-center gap-2.5 bg-slate-50 border-2 border-slate-200 rounded-xl p-3 cursor-pointer"><input type="checkbox" id="pr-story" checked class="w-4 h-4 accent-green-600"><span class="text-sm font-bold">📖 পাঠ</span></label>
+        <label class="flex items-center gap-2.5 bg-slate-50 border-2 border-slate-200 rounded-xl p-3 cursor-pointer"><input type="checkbox" id="pr-words" checked class="w-4 h-4 accent-amber-600"><span class="text-sm font-bold">📚 শব্দ ও অর্থ</span></label>
+        <label class="flex items-center gap-2.5 bg-slate-50 border-2 border-slate-200 rounded-xl p-3 cursor-pointer"><input type="checkbox" id="pr-dates" checked class="w-4 h-4 accent-red-600"><span class="text-sm font-bold">📅 তারিখ</span></label>
+        <label class="flex items-center gap-2.5 bg-slate-50 border-2 border-slate-200 rounded-xl p-3 cursor-pointer"><input type="checkbox" id="pr-compound" checked class="w-4 h-4 accent-indigo-600"><span class="text-sm font-bold">🔤 যুক্তবর্ণ</span></label>
+        <label class="flex items-center gap-2.5 bg-slate-50 border-2 border-slate-200 rounded-xl p-3 cursor-pointer"><input type="checkbox" id="pr-ex1" checked class="w-4 h-4 accent-green-600"><span class="text-sm font-bold">✍️ অনুশীলন ১</span></label>
+        <label class="flex items-center gap-2.5 bg-slate-50 border-2 border-slate-200 rounded-xl p-3 cursor-pointer"><input type="checkbox" id="pr-ex2" checked class="w-4 h-4 accent-green-600"><span class="text-sm font-bold">✅ অনুশীলন ২</span></label>
+        <label class="flex items-center gap-2.5 bg-slate-50 border-2 border-slate-200 rounded-xl p-3 cursor-pointer"><input type="checkbox" id="pr-ex3" checked class="w-4 h-4 accent-green-600"><span class="text-sm font-bold">📅 অনুশীলন ৩</span></label>
+        <label class="flex items-center gap-2.5 bg-slate-50 border-2 border-slate-200 rounded-xl p-3 cursor-pointer"><input type="checkbox" id="pr-ex4" checked class="w-4 h-4 accent-green-600"><span class="text-sm font-bold">🧩 অনুশীলন ৪</span></label>
+        <label class="flex items-center gap-2.5 bg-slate-50 border-2 border-slate-200 rounded-xl p-3 cursor-pointer"><input type="checkbox" id="pr-key" class="w-4 h-4 accent-emerald-600"><span class="text-sm font-bold">🗝️ উত্তরপত্র</span></label>
+        <label class="flex items-center gap-2.5 bg-slate-50 border-2 border-slate-200 rounded-xl p-3 cursor-pointer"><input type="checkbox" id="pr-wc" class="w-4 h-4 accent-emerald-600"><span class="text-sm font-bold">🎴 শব্দ কার্ড</span></label>
+      </div>
+      <div class="flex items-center justify-between gap-2 bg-amber-50 border border-amber-200 rounded-xl p-3">
+        <span class="text-xs font-bold text-amber-900">দ্রুত নির্বাচন:</span>
+        <div class="flex gap-2">
+          <button onclick="selectAllPrint(true)" class="text-xs font-black bg-amber-400 text-amber-950 px-3 py-1.5 rounded-lg">সব</button>
+          <button onclick="selectAllPrint(false)" class="text-xs font-black bg-slate-200 text-slate-700 px-3 py-1.5 rounded-lg">কিছু না</button>
+        </div>
+      </div>
+    </div>
+    <div class="p-4 bg-slate-50 border-t flex gap-2.5">
+      <button onclick="generatePrint()" class="flex-1 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-black py-3 rounded-2xl active:scale-95 flex items-center justify-center gap-2"><i class="fas fa-print"></i> প্রিন্ট</button>
+      <button onclick="closePrintModal()" class="sm:w-32 bg-white text-slate-700 font-bold py-3 rounded-2xl border-2 border-slate-200">বাতিল</button>
+    </div>
+  </div>
+</div>
+
+<!-- INSTALL MODAL -->
+<div id="installModal" class="no-print fixed inset-0 bg-slate-900/75 backdrop-blur-sm z-[95] hidden items-center justify-center p-3">
+  <div class="bg-white rounded-3xl max-w-lg w-full shadow-2xl overflow-hidden border-4 border-pink-200 max-h-[92vh] flex flex-col">
+    <div class="bg-gradient-to-r from-pink-600 to-rose-600 p-4 text-white flex items-center justify-between">
+      <h3 class="text-lg font-black">📲 ইনস্টল করুন</h3>
+      <button onclick="closeInstallModal()" class="bg-white/20 w-9 h-9 rounded-full flex items-center justify-center"><i class="fas fa-xmark"></i></button>
+    </div>
+    <div class="p-4 overflow-y-auto space-y-3">
+      <div id="installNativeBox" class="hidden bg-emerald-50 border-2 border-emerald-300 rounded-2xl p-4 text-center space-y-2">
+        <div class="text-4xl">✨</div>
+        <button onclick="triggerNativeInstall()" class="w-full bg-gradient-to-r from-pink-600 to-rose-600 text-white font-black py-3 rounded-2xl">🚀 ইনস্টল করুন</button>
+      </div>
+      <p id="installHeaderMsg" class="text-xs text-slate-600 font-semibold bg-pink-50 border border-pink-200 rounded-xl p-3"></p>
+      <div id="installSteps" class="space-y-2.5 text-sm"></div>
+    </div>
+    <div class="p-4 bg-slate-50 border-t"><button onclick="closeInstallModal()" class="w-full bg-slate-700 text-white font-bold py-3 rounded-2xl">বুঝেছি 👍</button></div>
+  </div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+/* ═══════════ DRAWER ═══════════ */
+function openDrawer(){document.getElementById('settingsDrawer').classList.add('open');document.getElementById('drawerBackdrop').classList.add('open');document.getElementById('settingsFab').classList.add('open');document.getElementById('fabIcon').className='fas fa-xmark';document.body.style.overflow='hidden';}
+function closeDrawer(){document.getElementById('settingsDrawer').classList.remove('open');document.getElementById('drawerBackdrop').classList.remove('open');document.getElementById('settingsFab').classList.remove('open');document.getElementById('fabIcon').className='fas fa-sliders';document.body.style.overflow='';}
+function toggleDrawer(){playSound('click');const d=document.getElementById('settingsDrawer');if(d.classList.contains('open'))closeDrawer();else openDrawer();}
+function updateDrawerSound(){const i=document.getElementById('drawerSoundIcon'),t=document.getElementById('drawerSoundText');if(audioEnabled){i.className='fas fa-volume-up';t.innerText='শব্দ চালু আছে';}else{i.className='fas fa-volume-xmark';t.innerText='শব্দ বন্ধ আছে';}}
+function syncNameInputs(n){const a=document.getElementById('childNameInput'),b=document.getElementById('childNameInputGame');if(a&&a.value!==n)a.value=n;if(b&&b.value!==n)b.value=n;}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDrawer();});
+
+/* ═══════════ DATA ═══════════ */
+const LESSON_SENTENCES = [
+  '১৯৭১ সালে আমাদের দেশে একটা যুদ্ধ হয়েছিল।',
+  'অনেক বড় যুদ্ধ — সেই যুদ্ধকে আমরা মুক্তিযুদ্ধ বলি।',
+  'তখন আমাদের দেশ পাকিস্তানের অংশ ছিল।',
+  'পাকিস্তানি মিলিটারি ২৫শে মার্চ আমাদের ওপর হামলা করে।',
+  'অনেক মানুষ মেরে ফেলে, অনেক ঘর-বাড়ি পুড়িয়ে দেয়।',
+  '২৬শে মার্চ এদেশের মানুষ যুদ্ধ শুরু করে।',
+  'দেশের জন্য যারা যুদ্ধ করেন — তাঁরা মুক্তিযোদ্ধা।',
+  'মুক্তিযোদ্ধারা ৯ মাস ধরে যুদ্ধ করেন।',
+  'দেশের জন্য যারা মারা যান — তাঁরা শহিদ।',
+  '১৯৭১ সালের ১৬ই ডিসেম্বর পাকিস্তানিরা হেরে যায়।',
+  'মুক্তিযোদ্ধারা জয়ী হন, বাংলাদেশ স্বাধীন হয়।',
+  '২৬শে মার্চ আমাদের স্বাধীনতা দিবস।',
+  '১৬ই ডিসেম্বর আমাদের বিজয় দিবস।'
+];
+
+const VOCABULARY = [
+  { word:'মুক্তিযুদ্ধ', emoji:'🇧🇩', meaning:'দেশকে স্বাধীন করার যুদ্ধ', detailed:'১৯৭১ সালে বাংলাদেশের স্বাধীনতার জন্য যে যুদ্ধ হয়েছিল', breakdown:'মু + ক্তি + যু + দ্ধ' },
+  { word:'যুদ্ধ', emoji:'⚔️', meaning:'লড়াই', detailed:'দুই পক্ষের মধ্যে লড়াই', breakdown:'যু + দ্ধ' },
+  { word:'শহিদ', emoji:'🌹', meaning:'দেশের জন্য যারা মারা যান', detailed:'যারা দেশ বা ধর্মের জন্য কাজ করতে গিয়ে মারা যান', breakdown:'শ + হি + দ' },
+  { word:'মুক্তিযোদ্ধা', emoji:'🎖️', meaning:'যারা দেশকে মুক্ত করতে যুদ্ধ করেন', detailed:'১৯৭১ সালের স্বাধীনতা যুদ্ধে অংশ নেওয়া বীর সৈনিক', breakdown:'মু + ক্তি + যো + দ্ধা' },
+  { word:'পাকিস্তানি', emoji:'🚩', meaning:'পাকিস্তানের', detailed:'তখন আমাদের দেশ পাকিস্তানের অংশ ছিল', breakdown:'পা + কি + স্তা + নি' },
+  { word:'স্বাধীনতা', emoji:'🕊️', meaning:'মুক্ত হওয়া', detailed:'কোনো দেশের অন্য কারো অধীন না থাকা', breakdown:'স্বা + ধী + ন + তা' },
+  { word:'স্বাধীনতা দিবস', emoji:'🌅', meaning:'২৬শে মার্চ', detailed:'এই দিনে আমাদের যুদ্ধ শুরু হয়েছিল', breakdown:'স্বা + ধী + ন + তা + দি + ব + স' },
+  { word:'বিজয় দিবস', emoji:'🏆', meaning:'১৬ই ডিসেম্বর', detailed:'এই দিনে আমরা যুদ্ধে জয়ী হয়েছিলাম', breakdown:'বি + জ + য় + দি + ব + স' }
+];
+
+const COMPOUNDS = [
+  { compound:'স্ত', word:'পাকিস্তানি', parts:['স','ত'], hint:'স + হসন্ত + ত = স্ত', icon:'🚩' },
+  { compound:'ক্ত', word:'মুক্তি', parts:['ক','ত'], hint:'ক + হসন্ত + ত = ক্ত', icon:'🕊️' },
+  { compound:'দ্ধ', word:'যুদ্ধ', parts:['দ','ধ'], hint:'দ + হসন্ত + ধ = দ্ধ', icon:'⚔️' },
+  { compound:'ম্ব', word:'ডিসেম্বর', parts:['ম','ব'], hint:'ম + হসন্ত + ব = ম্ব', icon:'📅' },
+  { compound:'ষ্ট', word:'কষ্ট', parts:['ষ','ট'], hint:'ষ + হসন্ত + ট = ষ্ট', icon:'💪' }
+];
+
+const DATES_INFO = [
+  { date:'২৬শে মার্চ', desc:'২৬শে মার্চ আমাদের স্বাধীনতা দিবস। এই দিনে এদেশের মানুষ দেশকে স্বাধীন করার জন্য যুদ্ধ শুরু করে।' },
+  { date:'১৬ই ডিসেম্বর', desc:'১৬ই ডিসেম্বর আমাদের বিজয় দিবস। এই দিনে পাকিস্তানিরা হেরে যায় এবং বাংলাদেশ স্বাধীন হয়।' }
+];
+
+const EVENTS = [
+  { text:'২৫শে মার্চ ১৯৭১ — পাকিস্তানি মিলিটারি আমাদের ওপর হামলা করে।' },
+  { text:'২৬শে মার্চ ১৯৭১ — এদেশের মানুষ দেশের জন্য যুদ্ধ শুরু করে।' },
+  { text:'৯ মাস ধরে মুক্তিযোদ্ধারা যুদ্ধ করেন। অনেকে শহিদ হন।' },
+  { text:'১৬ই ডিসেম্বর ১৯৭১ — পাকিস্তানিরা হেরে যায়, বাংলাদেশ স্বাধীন হয়।' }
+];
+
+const FILL_BLANKS = [
+  { id:1, prompt:'১৯৭১ সালে আমাদের দেশে একটা ______ হয়েছিল।', options:['যুদ্ধ','উৎসব','খেলা'], correct:'যুদ্ধ', template:'১৯৭১ সালে আমাদের দেশে একটা {S} হয়েছিল।' },
+  { id:2, prompt:'সেই যুদ্ধকে আমরা ______ বলি।', options:['মুক্তিযুদ্ধ','ক্রিকেট','বিতর্ক'], correct:'মুক্তিযুদ্ধ', template:'সেই যুদ্ধকে আমরা {S} বলি।' },
+  { id:3, prompt:'দেশের জন্য যারা যুদ্ধ করেন, তাঁরা ______।', options:['মুক্তিযোদ্ধা','শিক্ষক','খেলোয়াড়'], correct:'মুক্তিযোদ্ধা', template:'দেশের জন্য যারা যুদ্ধ করেন, তাঁরা {S}।' },
+  { id:4, prompt:'মুক্তিযোদ্ধারা ______ মাস ধরে যুদ্ধ করেন।', options:['৯','২','১২'], correct:'৯', template:'মুক্তিযোদ্ধারা {S} মাস ধরে যুদ্ধ করেন।' },
+  { id:5, prompt:'২৬শে মার্চ আমাদের ______ দিবস।', options:['স্বাধীনতা','বিজয়','শোক'], correct:'স্বাধীনতা', template:'২৬শে মার্চ আমাদের {S} দিবস।' },
+  { id:6, prompt:'১৬ই ডিসেম্বর আমাদের ______ দিবস।', options:['বিজয়','স্বাধীনতা','ঈদ'], correct:'বিজয়', template:'১৬ই ডিসেম্বর আমাদের {S} দিবস।' }
+];
+
+const TRUE_FALSE = [
+  { id:1, text:'১৯৭১ সালে বাংলাদেশে মুক্তিযুদ্ধ হয়েছিল।', isTrue:true },
+  { id:2, text:'পাকিস্তানি মিলিটারি ২৬শে মার্চ হামলা করে।', isTrue:false },
+  { id:3, text:'মুক্তিযোদ্ধারা ৯ মাস যুদ্ধ করেন।', isTrue:true },
+  { id:4, text:'১৬ই ডিসেম্বর আমাদের স্বাধীনতা দিবস।', isTrue:false },
+  { id:5, text:'দেশের জন্য যারা মারা যান তাঁরা শহিদ।', isTrue:true },
+  { id:6, text:'২৬শে মার্চ আমাদের বিজয় দিবস।', isTrue:false }
+];
+
+const DATE_MATCH = [
+  { id:1, question:'২৬শে মার্চ কী দিবস?', options:['স্বাধীনতা দিবস','বিজয় দিবস','শোক দিবস'], correct:'স্বাধীনতা দিবস' },
+  { id:2, question:'১৬ই ডিসেম্বর কী দিবস?', options:['বিজয় দিবস','স্বাধীনতা দিবস','নববর্ষ'], correct:'বিজয় দিবস' },
+  { id:3, question:'কত সালে মুক্তিযুদ্ধ হয়?', options:['১৯৭১','১৯৫২','১৯৪৭'], correct:'১৯৭১' },
+  { id:4, question:'মুক্তিযুদ্ধ কত মাস চলে?', options:['৯ মাস','৬ মাস','১২ মাস'], correct:'৯ মাস' }
+];
+
+const UNSCRAMBLE = [
+  { id:1, scrambled:['দ্ধ','যু'], correct:'যুদ্ধ', hint:'লড়াই' },
+  { id:2, scrambled:['হিদ','শ'], correct:'শহিদ', hint:'দেশের জন্য যারা মারা যান' },
+  { id:3, scrambled:['ক্তি','মু'], correct:'মুক্তি', hint:'স্বাধীন হওয়া' },
+  { id:4, scrambled:['সেম্ব','ডি'], correct:'ডিসেম্বর', hint:'বিজয়ের মাস' }
+];
+
+const CG_PAIRS = [
+  { q:'২৬শে মার্চ', a:'স্বাধীনতা দিবস', emoji:'🌅' },
+  { q:'১৬ই ডিসেম্বর', a:'বিজয় দিবস', emoji:'🏆' },
+  { q:'১৯৭১', a:'মুক্তিযুদ্ধের বছর', emoji:'🇧🇩' },
+  { q:'৯ মাস', a:'যুদ্ধের সময়', emoji:'⏳' },
+  { q:'শহিদ', a:'দেশের জন্য যারা মারা যান', emoji:'🌹' },
+  { q:'মুক্তিযোদ্ধা', a:'যারা দেশকে মুক্ত করেন', emoji:'🎖️' }
+];
+
+/* ═══════════ PATH GAME DATA ═══════════ */
+const PG_QUESTIONS = [
+  { text:'আমাদের দেশের নাম কী?', answer:'বাংলাদেশ', options:['বাংলাদেশ','ভারত','নেপাল'] },
+  { text:'মুক্তিযুদ্ধ কোন সালে হয়?', answer:'১৯৭১', options:['১৯৭১','১৯৫২','১৯৪৭'] },
+  { text:'মুক্তিযুদ্ধ কত মাস চলে?', answer:'৯ মাস', options:['৯ মাস','২ মাস','৬ মাস'] },
+  { text:'আমাদের স্বাধীনতা দিবস কোনটি?', answer:'২৬শে মার্চ', options:['২৬শে মার্চ','১৬ই ডিসেম্বর','১লা বৈশাখ'] },
+  { text:'আমাদের বিজয় দিবস কোনটি?', answer:'১৬ই ডিসেম্বর', options:['১৬ই ডিসেম্বর','২৬শে মার্চ','২১শে ফেব্রুয়ারি'] },
+  { text:'যারা দেশের জন্য যুদ্ধ করেন তাঁরা কে?', answer:'মুক্তিযোদ্ধা', options:['মুক্তিযোদ্ধা','শিক্ষক','খেলোয়াড়'] },
+  { text:'দেশের জন্য যারা মারা যান তাঁদের কী বলা হয়?', answer:'শহিদ', options:['শহিদ','বীর','রাজা'] },
+  { text:'১৬ই ডিসেম্বর কী ঘটেছিল?', answer:'পাকিস্তানিরা হেরে যায়', options:['পাকিস্তানিরা হেরে যায়','যুদ্ধ শুরু হয়','বন্যা হয়'] }
+];
+
+/* STATE */
+let audioEnabled = true;
+let currentSpeechRate = 0.8;
+let activeReadingIndex = -1;
+let fillBlanksAnswers = {};
+let trueFalseAnswers = {};
+let dateMatchAnswers = {};
+let unscrambleState = {};
+let childName = '';
+let questionVoiceEnabled = true;
+let cgState = { flipped: [], matched: [], score: 0, processing: false };
+let pgState = {};
+
+try {
+  childName = localStorage.getItem('skChildName') || '';
+  const qv = localStorage.getItem('skQuestionVoice');
+  if(qv === 'false') questionVoiceEnabled = false;
+} catch(e){}
+
+const BN_DIGITS = ['০','১','২','৩','৪','৫','৬','৭','৮','৯'];
+function toBn(v){ return String(v).replace(/\d/g, d => BN_DIGITS[+d]); }
+function getNamePrefix(){ return childName && childName.trim() ? childName.trim() + ', ' : ''; }
+function saveChildName(name){ childName = name; try { localStorage.setItem('skChildName', name); } catch(e){} updateHeaderGreeting(); syncNameInputs(name); }
+function clearChildName(){ playSound('click'); childName = ''; syncNameInputs(''); try { localStorage.setItem('skChildName', ''); } catch(e){} updateHeaderGreeting(); showToast('নাম মুছে ফেলা হয়েছে।'); }
+function updateHeaderGreeting(){
+  const el = document.getElementById('headerGreeting');
+  if(!el) return;
+  const n = (childName || '').trim();
+  if(n) el.innerHTML = `<span>👋</span><span>স্বাগতম, <strong class="text-yellow-200 text-sm sm:text-base font-extrabold">${n}</strong>! শুভ শিক্ষা 🎓</span><span>✨</span>`;
+  else el.innerHTML = `<span>✨</span><span>পরিকল্পনা ও ডিজাইনে: <strong class="text-yellow-200 text-sm sm:text-base font-extrabold">মো: সাইফুল্লাহ সরওয়ার</strong></span><span>👑</span>`;
+}
+
+/* AUDIO */
+const PRAISES = ['বাহবা সুন্দর!','অসাধারণ হয়েছে!','খুব ভালো!','অপূর্ব!','তুমি দারুণ পারো!'];
+const RETRIES = ['আবার চেষ্টা করো!','চিন্তা করে আবার ট্রাই করো!','হলো না, আবার চেষ্টা করো!'];
+function getRandomItem(a){ return a[Math.floor(Math.random()*a.length)]; }
+
+let audioCtx = null;
+function getAudioContext(){ if(!audioCtx){ const AC = window.AudioContext || window.webkitAudioContext; if(AC) audioCtx = new AC(); } if(audioCtx && audioCtx.state === 'suspended') audioCtx.resume(); return audioCtx; }
+function playSound(type){
+  if(!audioEnabled) return;
+  try{
+    const ctx = getAudioContext(); if(!ctx) return;
+    const o = ctx.createOscillator(), g = ctx.createGain();
+    o.connect(g); g.connect(ctx.destination);
+    const now = ctx.currentTime;
+    if(type === 'correct'){
+      o.type='triangle';
+      [523.25,659.25,783.99,1046.5].forEach((f,i) => o.frequency.setValueAtTime(f, now + i*.1));
+      g.gain.setValueAtTime(.3,now); g.gain.exponentialRampToValueAtTime(.01,now+.5);
+      o.start(now); o.stop(now+.5);
+    } else if(type === 'wrong'){
+      o.type='sawtooth';
+      o.frequency.setValueAtTime(220,now); o.frequency.setValueAtTime(164.81,now+.15);
+      g.gain.setValueAtTime(.3,now); g.gain.exponentialRampToValueAtTime(.01,now+.4);
+      o.start(now); o.stop(now+.4);
+    } else if(type === 'click'){
+      o.type='sine';
+      o.frequency.setValueAtTime(600,now); o.frequency.exponentialRampToValueAtTime(200,now+.05);
+      g.gain.setValueAtTime(.2,now); g.gain.exponentialRampToValueAtTime(.01,now+.05);
+      o.start(now); o.stop(now+.05);
+    } else if(type === 'flip'){
+      o.type='sine';
+      o.frequency.setValueAtTime(880,now); o.frequency.exponentialRampToValueAtTime(1200,now+.08);
+      g.gain.setValueAtTime(.2,now); g.gain.exponentialRampToValueAtTime(.01,now+.1);
+      o.start(now); o.stop(now+.1);
+    } else if(type === 'whistle'){
+      o.type='sine';
+      o.frequency.setValueAtTime(880,now); o.frequency.setValueAtTime(1100,now+.15);
+      o.frequency.setValueAtTime(880,now+.3); o.frequency.setValueAtTime(1100,now+.45);
+      g.gain.setValueAtTime(.25,now); g.gain.exponentialRampToValueAtTime(.01,now+.6);
+      o.start(now); o.stop(now+.6);
+    }
+  } catch(e){}
+}
+
+let availableBengaliVoice = null;
+let audioPlayerFallback = null;
+function initBengaliVoices(){
+  if('speechSynthesis' in window){
+    const v = window.speechSynthesis.getVoices();
+    availableBengaliVoice = v.find(x => x.lang.toLowerCase().includes('bn') || x.lang.toLowerCase().includes('bangla') || x.lang.toLowerCase().includes('bengali') || x.name.toLowerCase().includes('bengali') || x.name.toLowerCase().includes('bangla')) || null;
+  }
+}
+if('speechSynthesis' in window){ window.speechSynthesis.onvoiceschanged = initBengaliVoices; initBengaliVoices(); }
+
+function speakText(text, onEnd=null){
+  if(!audioEnabled){ if(onEnd) onEnd(); return; }
+  getAudioContext();
+  if(audioPlayerFallback){ audioPlayerFallback.pause(); audioPlayerFallback = null; }
+  function playOnline(phrase, cb){
+    try{
+      const url = `https://translate.google.com/translate_tts?ie=UTF-8&q=${encodeURIComponent(phrase)}&tl=bn&client=tw-ob`;
+      audioPlayerFallback = new Audio(url);
+      audioPlayerFallback.playbackRate = currentSpeechRate;
+      audioPlayerFallback.onended = () => { audioPlayerFallback = null; if(cb) cb(); };
+      audioPlayerFallback.onerror = () => { audioPlayerFallback = null; if(cb) cb(); };
+      const p = audioPlayerFallback.play();
+      if(p !== undefined) p.catch(() => { if(cb) cb(); });
+    } catch(e){ if(cb) cb(); }
+  }
+  if('speechSynthesis' in window){
+    if(window.speechSynthesis.paused) window.speechSynthesis.resume();
+    window.speechSynthesis.cancel();
+    initBengaliVoices();
+    if(!availableBengaliVoice){ playOnline(text, onEnd); return; }
+    setTimeout(() => {
+      try{
+        const u = new SpeechSynthesisUtterance(text);
+        u.lang = 'bn-BD'; u.rate = currentSpeechRate; u.pitch = 1.0;
+        if(availableBengaliVoice) u.voice = availableBengaliVoice;
+        let fired = false;
+        const safe = () => { if(!fired){ fired = true; if(onEnd) onEnd(); } };
+        u.onend = safe; u.onerror = () => playOnline(text, safe);
+        window.speechSynthesis.speak(u);
+      } catch(e){ playOnline(text, onEnd); }
+    }, 50);
+  } else playOnline(text, onEnd);
+}
+function stopAudio(){
+  if('speechSynthesis' in window) window.speechSynthesis.cancel();
+  if(audioPlayerFallback){ audioPlayerFallback.pause(); audioPlayerFallback = null; }
+  activeReadingIndex = -1;
+  renderPassage();
+  const b = document.getElementById('playBtnText'), i = document.getElementById('playIcon');
+  if(b) b.innerText = 'পুরো পাঠ শোনো 🔊';
+  if(i) i.className = 'fas fa-volume-up';
+}
+function toggleAudio(){ audioEnabled = !audioEnabled; if(!audioEnabled) stopAudio(); else playSound('click'); updateDrawerSound(); }
+function changeSpeechRate(r){ currentSpeechRate = parseFloat(r); playSound('click'); }
+function toggleQuestionVoice(enabled){
+  questionVoiceEnabled = enabled;
+  try { localStorage.setItem('skQuestionVoice', enabled ? 'true' : 'false'); } catch(e){}
+  playSound('click');
+  const cb1 = document.getElementById('questionVoiceToggle');
+  if(cb1) cb1.checked = enabled;
+  if(enabled){ showToast('🔊 প্রশ্ন ভয়েস চালু'); repeatPathQuestion(); }
+  else { showToast('🔇 প্রশ্ন ভয়েস বন্ধ'); stopAudio(); }
+}
+
+/* TABS */
+function switchTab(name){
+  playSound('click');
+  stopAudio();
+  if(name !== 'pathgame') stopPathGame();
+  ['reading','pathgame','words','dates','compound','cardgame','exercises','guide'].forEach(t => {
+    const el = document.getElementById('section-' + t);
+    if(el) el.classList.add('hidden');
+    const btn = document.getElementById('tab-' + t);
+    if(btn) btn.classList.remove('active');
+  });
+  document.getElementById('section-' + name).classList.remove('hidden');
+  document.getElementById('tab-' + name).classList.add('active');
+  if(name === 'pathgame') setTimeout(initPathGame, 100);
+}
+
+/* READING */
+function renderPassage(){
+  const c = document.getElementById('passageContainer');
+  c.innerHTML = LESSON_SENTENCES.map((s,i) => {
+    const a = (activeReadingIndex === i);
+    return `<div onclick="readLine(${i})" class="line-card p-3 rounded-2xl border-2 ${a ? 'active-reading' : 'bg-white border-green-100 hover:border-green-300'} cursor-pointer flex items-center justify-between gap-3 shadow-sm transition">
+      <div class="flex items-center gap-3">
+        <span class="w-7 h-7 rounded-full ${a ? 'bg-amber-500 text-white' : 'bg-green-100 text-green-800'} text-xs font-black flex items-center justify-center shrink-0">${toBn(i+1)}</span>
+        <span class="text-gray-800 font-bold">${s}</span>
+      </div>
+      <i class="fas ${a ? 'fa-volume-high text-amber-600 animate-pulse' : 'fa-volume-low text-green-500'} text-sm"></i>
+    </div>`;
+  }).join('');
+  document.getElementById('sentenceCount').innerText = toBn(LESSON_SENTENCES.length) + 'টি বাক্য';
+}
+function readLine(i){ playSound('click'); activeReadingIndex = i; renderPassage(); speakText(LESSON_SENTENCES[i], () => { activeReadingIndex = -1; renderPassage(); }); }
+function readEntirePassage(){
+  playSound('click');
+  if(activeReadingIndex !== -1){ stopAudio(); return; }
+  document.getElementById('playBtnText').innerText = 'পড়া শুনছো... 🔊';
+  document.getElementById('playIcon').className = 'fas fa-spinner fa-spin';
+  let idx = 0;
+  function next(){
+    if(idx >= LESSON_SENTENCES.length){ stopAudio(); return; }
+    activeReadingIndex = idx; renderPassage();
+    speakText(LESSON_SENTENCES[idx], () => { idx++; next(); });
+  }
+  next();
+}
+function renderWordExplorer(){
+  document.getElementById('wordExplorerGrid').innerHTML = VOCABULARY.slice(0,4).map((v,i) => `
+    <div onclick="exploreWord(${i})" class="bg-white rounded-2xl p-3 border-2 border-amber-200 hover:border-amber-400 shadow-sm cursor-pointer text-center space-y-1">
+      <span class="text-3xl block">${v.emoji}</span>
+      <h4 class="text-lg font-black text-amber-950">${v.word}</h4>
+      <p class="text-[10px] font-bold text-slate-500">${v.breakdown}</p>
+      <p class="text-[11px] bg-amber-100 text-amber-900 font-bold px-2 py-0.5 rounded-full inline-block">${v.meaning}</p>
+    </div>`).join('');
+}
+function exploreWord(i){ playSound('click'); const v = VOCABULARY[i]; speakText(`${v.word}। ${v.breakdown}। অর্থ: ${v.meaning}। ${v.detailed}।`); }
+
+/* WORD CARDS */
+const CARD_COLORS = [
+  { from:'#16a34a', to:'#22c55e' }, { from:'#dc2626', to:'#ef4444' },
+  { from:'#f59e0b', to:'#fbbf24' }, { from:'#7c3aed', to:'#a78bfa' },
+  { from:'#0891b2', to:'#22d3ee' }, { from:'#db2777', to:'#f472b6' },
+  { from:'#047857', to:'#10b981' }, { from:'#b91c1c', to:'#dc2626' }
+];
+function renderWordCards(){
+  document.getElementById('wordCardsGrid').innerHTML = VOCABULARY.map((v, i) => {
+    const c = CARD_COLORS[i % CARD_COLORS.length];
+    return `<div onclick="speakWordCard(${i})" data-wcard="${i}" class="word-card-item rounded-3xl p-5 text-white text-center space-y-2 shadow-xl border-4 border-white/40" style="background:linear-gradient(135deg,${c.from},${c.to});">
+      <div class="speaker-badge"><i class="fas fa-volume-up"></i></div>
+      <div class="text-5xl">${v.emoji}</div>
+      <div class="text-2xl font-title font-black">${v.word}</div>
+      <div class="text-xs font-bold opacity-95">📖 ${v.breakdown}</div>
+      <div class="inline-flex items-center gap-1 bg-white/25 px-3 py-1 rounded-full text-[11px] font-black">💡 ${v.meaning}</div>
+      <div class="text-[11px] font-bold opacity-90 italic">${v.detailed}</div>
+    </div>`;
+  }).join('');
+}
+function speakWordCard(i){ playSound('click'); const v = VOCABULARY[i]; const card = document.querySelector(`.word-card-item[data-wcard="${i}"]`); if(card){ card.classList.add('speaking'); setTimeout(() => card.classList.remove('speaking'), 1100); } speakText(`${v.word}। বর্ণ: ${v.breakdown}। অর্থ: ${v.meaning}। ${v.detailed}।`); }
+function printWordCards(){
+  playSound('click'); stopAudio();
+  let html = '';
+  const totalPages = Math.ceil(VOCABULARY.length / 6);
+  for(let page = 0; page < totalPages; page++){
+    const chunk = VOCABULARY.slice(page * 6, page * 6 + 6);
+    html += `<div class="pr-page${page > 0 ? ' pr-pagebreak' : ''}">`;
+    if(page === 0) html += `<div class="pr-head"><div class="pr-emoji-row">🇧🇩 🌅 🏆 🌹 🎖️</div><div class="pr-kicker">📚 আমার বাংলা বই • প্রথম শ্রেণি • পাঠ ৫২ : আমাদের মুক্তিযুদ্ধ</div><h1>🎴 শব্দ ও অর্থ কার্ড</h1></div>`;
+    html += `<div class="wc-print-grid">`;
+    chunk.forEach(v => { html += `<div class="wc-print-card"><div class="wc-icon">${v.emoji}</div><div class="wc-name">${v.word}</div><div style="font-size:10pt;color:#15803d;font-weight:700;margin-top:1mm">📖 ${v.breakdown}</div><div class="wc-en">💡 ${v.meaning}</div><div class="wc-cut">✂️ - - - - - - - - - - - - - - ✂️</div></div>`; });
+    html += `</div><div class="pr-foot">🎴 কার্ড • পাঠ ৫২ • মো: সাইফুল্লাহ সরওয়ার ⭐</div></div>`;
+  }
+  document.getElementById('printArea').innerHTML = html;
+  setTimeout(() => window.print(), 350);
+}
+function speakDate(i){ playSound('click'); const d = DATES_INFO[i]; speakText(`${d.date}। ${d.desc}`); }
+function speakEvent(i){ playSound('click'); speakText(EVENTS[i].text); }
+
+function renderCompounds(){
+  document.getElementById('compoundGrid').innerHTML = COMPOUNDS.map((c,i) => `
+    <div class="bg-white rounded-3xl p-5 border-4 border-indigo-200 shadow-md space-y-3">
+      <div class="flex items-center justify-between">
+        <div class="text-3xl">${c.icon}</div>
+        <span class="text-xs bg-indigo-100 text-indigo-800 font-black px-2.5 py-1 rounded-full">${c.hint}</span>
+      </div>
+      <div class="flex items-center justify-center gap-1.5 py-2 flex-wrap">
+        <div class="compound-box"><span class="bn">${c.parts[0]}</span></div>
+        <span class="text-3xl font-black text-indigo-400">+</span>
+        <div class="compound-box" style="background:#fee2e2"><span class="bn text-rose-600">্</span></div>
+        <span class="text-3xl font-black text-indigo-400">+</span>
+        <div class="compound-box"><span class="bn">${c.parts[1]}</span></div>
+        <span class="text-3xl font-black text-indigo-400">=</span>
+        <div class="compound-box" style="background:#fef08a;border-color:#eab308"><span class="bn text-amber-800" style="font-size:26px">${c.compound}</span></div>
+      </div>
+      <div class="text-center"><p class="text-2xl font-black text-indigo-900">${c.word}</p></div>
+      <button onclick="speakCompound(${i})" class="w-full bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-bold py-2 rounded-2xl active:scale-95 flex items-center justify-center gap-2 text-sm"><i class="fas fa-volume-up"></i> উচ্চারণ শোনো</button>
+    </div>`).join('');
+}
+function speakCompound(i){ playSound('click'); const c = COMPOUNDS[i]; speakText(`${c.parts[0]}, হসন্ত, ${c.parts[1]}। যুক্তবর্ণ ${c.compound}। শব্দ: ${c.word}`); }
+
+/* ═══════════════════════════════════════════════════
+   PATH GAME — মুক্তিযোদ্ধার পথ
+   ═══════════════════════════════════════════════════ */
+let pgCanvas, pgCtx, pgAnimId = null;
+let pgTime = 0, pgLastTime = 0;
+let pgFighterX = 0, pgFighterTargetX = 0;
+let pgFighterY = 0;
+let pgFighterJumping = false;
+let pgDawnProgress = 0;
+let pgCurrentSigns = [];
+let pgSignBounds = [];
+let pgHearts = [];
+let pgDoves = [];
+
+function initPathGame(){
+  pgCanvas = document.getElementById('pathCanvas');
+  if(!pgCanvas) return;
+  pgCtx = pgCanvas.getContext('2d');
+  const rect = pgCanvas.getBoundingClientRect();
+  pgCanvas.width = rect.width;
+  pgCanvas.height = rect.height;
+
+  pgCanvas.removeEventListener('pointerdown', handlePathClick);
+  pgCanvas.addEventListener('pointerdown', handlePathClick);
+
+  pgState = {
+    score: 0,
+    questionIndex: 0,
+    processing: false,
+    fighterX: 60,
+    fighterTargetX: 60,
+    jumping: false,
+    jumpT: 0,
+    dawnProgress: 0,
+    hearts: [],
+    doves: [],
+    celebrateT: 0,
+    signFadeT: 0
+  };
+
+  document.getElementById('pgScoreText').innerText = '০';
+  document.getElementById('pgOverlay').classList.add('hidden');
+  document.getElementById('pgOverlay').classList.remove('flex');
+  const inp = document.getElementById('childNameInputGame');
+  if(inp) inp.value = childName;
+
+  pgLastTime = performance.now();
+  loadPathQuestion();
+  startPathLoop();
+}
+
+function loadPathQuestion(){
+  if(pgState.questionIndex >= PG_QUESTIONS.length){
+    showPathWin();
+    return;
+  }
+  const q = PG_QUESTIONS[pgState.questionIndex];
+  document.getElementById('pgQuestion').innerText = q.text;
+
+  // Shuffle options
+  const opts = [...q.options];
+  for(let i = opts.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [opts[i], opts[j]] = [opts[j], opts[i]];
+  }
+
+  pgCurrentSigns = opts.map(o => ({
+    text: o,
+    isCorrect: o === q.answer,
+    shakeTime: 0,
+    disabled: false
+  }));
+  pgState.processing = false;
+
+  if(questionVoiceEnabled){
+    const prefix = getNamePrefix();
+    speakText(`${prefix}${q.text}`);
+  }
+}
+
+function repeatPathQuestion(){
+  playSound('click');
+  if(pgState.questionIndex >= PG_QUESTIONS.length) return;
+  const q = PG_QUESTIONS[pgState.questionIndex];
+  speakText(`${getNamePrefix()}${q.text}`);
+}
+
+function startPathLoop(){
+  if(pgAnimId) cancelAnimationFrame(pgAnimId);
+  function loop(now){
+    if(!pgCtx || !pgCanvas) return;
+    const dt = Math.min((now - pgLastTime) / 1000, 0.05);
+    pgLastTime = now;
+    pgTime += dt;
+    drawPathScene(dt);
+    pgAnimId = requestAnimationFrame(loop);
+  }
+  pgAnimId = requestAnimationFrame(loop);
+}
+
+function stopPathGame(){ if(pgAnimId){ cancelAnimationFrame(pgAnimId); pgAnimId = null; } }
+
+/* Draw the whole scene */
+function drawPathScene(dt){
+  const W = pgCanvas.width, H = pgCanvas.height;
+
+  /* ── Sky — dawn gradient based on progress ── */
+  const prog = pgState.questionIndex / PG_QUESTIONS.length;
+  // Night → Dawn sky
+  const sky = pgCtx.createLinearGradient(0, 0, 0, H * 0.55);
+  if(prog < 0.5){
+    sky.addColorStop(0, `rgb(${15 + prog*80}, ${23 + prog*60}, ${42 + prog*80})`);
+    sky.addColorStop(1, `rgb(${60 + prog*100}, ${40 + prog*80}, ${90 + prog*60})`);
+  } else {
+    const p2 = (prog - 0.5) * 2;
+    sky.addColorStop(0, `rgb(${55 + p2*100}, ${83 + p2*100}, ${122 + p2*80})`);
+    sky.addColorStop(0.5, `rgb(${160 + p2*80}, ${100 + p2*100}, ${140 + p2*80})`);
+    sky.addColorStop(1, `rgb(${254 - p2*30}, ${200 + p2*30}, ${120 - p2*40})`);
+  }
+  pgCtx.fillStyle = sky;
+  pgCtx.fillRect(0, 0, W, H * 0.55);
+
+  /* ── Stars (early) ── */
+  if(prog < 0.6){
+    pgCtx.fillStyle = `rgba(255,255,255,${0.8 - prog * 1.3})`;
+    const stars = [[0.1,0.08],[0.25,0.15],[0.4,0.05],[0.6,0.12],[0.75,0.08],[0.9,0.2],[0.15,0.22],[0.5,0.2],[0.85,0.28]];
+    stars.forEach(([sx,sy]) => {
+      pgCtx.beginPath();
+      pgCtx.arc(W*sx, H*sy, 1.5, 0, Math.PI*2);
+      pgCtx.fill();
+    });
+  }
+
+  /* ── Rising Sun ── */
+  const sunY = H * 0.5 - (prog * H * 0.35);
+  const sunX = W * 0.5;
+  const sunR = 28 + prog * 18;
+
+  // Glow
+  const glowG = pgCtx.createRadialGradient(sunX, sunY, 0, sunX, sunY, sunR * 3);
+  glowG.addColorStop(0, `rgba(253, 224, 71, ${0.5 + prog * 0.4})`);
+  glowG.addColorStop(1, 'rgba(253, 224, 71, 0)');
+  pgCtx.fillStyle = glowG;
+  pgCtx.beginPath();
+  pgCtx.arc(sunX, sunY, sunR * 3, 0, Math.PI*2);
+  pgCtx.fill();
+
+  // Sun body
+  const sunG = pgCtx.createRadialGradient(sunX, sunY, 0, sunX, sunY, sunR);
+  sunG.addColorStop(0, '#fef9c3');
+  sunG.addColorStop(0.6, '#fbbf24');
+  sunG.addColorStop(1, '#dc2626');
+  pgCtx.fillStyle = sunG;
+  pgCtx.beginPath();
+  pgCtx.arc(sunX, sunY, sunR, 0, Math.PI*2);
+  pgCtx.fill();
+
+  // Sun rays (growing with progress)
+  pgCtx.save();
+  pgCtx.translate(sunX, sunY);
+  pgCtx.rotate(pgTime * 0.3);
+  pgCtx.strokeStyle = `rgba(254, 240, 138, ${prog * 0.8})`;
+  pgCtx.lineWidth = 3;
+  pgCtx.lineCap = 'round';
+  const rayCount = 12;
+  for(let i = 0; i < rayCount; i++){
+    const a = (i * Math.PI * 2 / rayCount);
+    pgCtx.beginPath();
+    pgCtx.moveTo(Math.cos(a) * (sunR + 8), Math.sin(a) * (sunR + 8));
+    pgCtx.lineTo(Math.cos(a) * (sunR + 15 + prog * 12), Math.sin(a) * (sunR + 15 + prog * 12));
+    pgCtx.stroke();
+  }
+  pgCtx.restore();
+
+  /* ── Hills ── */
+  const groundY = H * 0.55;
+  pgCtx.fillStyle = '#14532d';
+  pgCtx.beginPath();
+  pgCtx.moveTo(0, groundY);
+  for(let x = 0; x <= W; x += 20){
+    const y = groundY - Math.abs(Math.sin(x * 0.01)) * 40 - 20;
+    pgCtx.lineTo(x, y);
+  }
+  pgCtx.lineTo(W, groundY); pgCtx.closePath(); pgCtx.fill();
+  pgCtx.fillStyle = '#15803d';
+  pgCtx.beginPath();
+  pgCtx.moveTo(0, groundY);
+  for(let x = 0; x <= W; x += 20){
+    const y = groundY - Math.abs(Math.cos(x * 0.013)) * 30 - 5;
+    pgCtx.lineTo(x, y);
+  }
+  pgCtx.lineTo(W, groundY); pgCtx.closePath(); pgCtx.fill();
+
+  /* ── Ground / Path ── */
+  const pathG = pgCtx.createLinearGradient(0, groundY, 0, H);
+  pathG.addColorStop(0, '#16a34a');
+  pathG.addColorStop(1, '#065f46');
+  pgCtx.fillStyle = pathG;
+  pgCtx.fillRect(0, groundY, W, H - groundY);
+
+  // Winding dirt path
+  pgCtx.fillStyle = 'rgba(180, 130, 70, 0.55)';
+  pgCtx.beginPath();
+  pgCtx.moveTo(0, H * 0.92);
+  for(let x = 0; x <= W; x += 15){
+    const y = H * 0.92 - Math.sin(x * 0.008) * 12;
+    pgCtx.lineTo(x, y);
+  }
+  for(let x = W; x >= 0; x -= 15){
+    const y = H * 0.92 - Math.sin(x * 0.008) * 12 + 24;
+    pgCtx.lineTo(x, y);
+  }
+  pgCtx.closePath();
+  pgCtx.fill();
+
+  /* ── Path stations (milestones) ── */
+  const totalQ = PG_QUESTIONS.length;
+  const startX = 60, endX = W - 100;
+  for(let i = 0; i <= totalQ; i++){
+    const stationX = startX + (i / totalQ) * (endX - startX);
+    const stationY = H * 0.92 - Math.sin(stationX * 0.008) * 12;
+    const reached = pgState.questionIndex >= i;
+
+    pgCtx.save();
+    pgCtx.beginPath();
+    pgCtx.arc(stationX, stationY - 10, 8, 0, Math.PI * 2);
+    pgCtx.fillStyle = reached ? '#fbbf24' : 'rgba(255,255,255,0.5)';
+    pgCtx.fill();
+    pgCtx.strokeStyle = reached ? '#dc2626' : '#64748b';
+    pgCtx.lineWidth = 2;
+    pgCtx.stroke();
+    if(reached){
+      pgCtx.fillStyle = '#7f1d1d';
+      pgCtx.font = 'bold 12px sans-serif';
+      pgCtx.textAlign = 'center';
+      pgCtx.fillText('✓', stationX, stationY - 5);
+    }
+    pgCtx.restore();
+  }
+
+  /* ── FLAG at end ── */
+  const flagX = endX + 40;
+  const flagY = H * 0.92 - Math.sin(flagX * 0.008) * 12;
+  // Pole
+  pgCtx.fillStyle = '#78350f';
+  pgCtx.fillRect(flagX, flagY - 90, 4, 90);
+  // Flag (waving)
+  const flagWave = Math.sin(pgTime * 3) * 3;
+  pgCtx.fillStyle = '#16a34a';
+  pgCtx.beginPath();
+  pgCtx.moveTo(flagX + 4, flagY - 85);
+  pgCtx.quadraticCurveTo(flagX + 40 + flagWave, flagY - 80, flagX + 75 + flagWave, flagY - 75);
+  pgCtx.lineTo(flagX + 75 + flagWave, flagY - 45);
+  pgCtx.quadraticCurveTo(flagX + 40 + flagWave, flagY - 50, flagX + 4, flagY - 45);
+  pgCtx.closePath();
+  pgCtx.fill();
+  // Red circle
+  pgCtx.fillStyle = '#dc2626';
+  pgCtx.beginPath();
+  pgCtx.arc(flagX + 38 + flagWave, flagY - 65, 12, 0, Math.PI * 2);
+  pgCtx.fill();
+
+  /* ── Fighter movement (animated walking) ── */
+  const fTarget = pgState.fighterTargetX;
+  const fCurrent = pgState.fighterX;
+  if(Math.abs(fTarget - fCurrent) > 1){
+    pgState.fighterX += (fTarget - fCurrent) * 0.06;
+  }
+
+  // Fighter jump animation
+  let jumpOffset = 0;
+  if(pgState.jumping){
+    pgState.jumpT += 0.08;
+    jumpOffset = -Math.sin(pgState.jumpT * Math.PI) * 40;
+    if(pgState.jumpT >= 1){
+      pgState.jumping = false;
+      pgState.jumpT = 0;
+    }
+  }
+
+  const fx = pgState.fighterX;
+  const fy = H * 0.92 - Math.sin(fx * 0.008) * 12 + jumpOffset;
+
+  drawFighter(fx, fy, pgState.questionIndex > 0);
+
+  /* ── Floating hearts/doves (celebration effect) ── */
+  pgState.hearts.forEach(h => {
+    h.y -= 1.2;
+    h.life -= 0.02;
+    if(h.life <= 0) return;
+    pgCtx.save();
+    pgCtx.globalAlpha = h.life;
+    pgCtx.font = `${h.size}px serif`;
+    pgCtx.textAlign = 'center';
+    pgCtx.fillText(h.emoji, h.x, h.y);
+    pgCtx.restore();
+  });
+  pgState.hearts = pgState.hearts.filter(h => h.life > 0);
+
+  pgState.doves.forEach(d => {
+    d.x += d.vx;
+    d.y += d.vy;
+    d.vy += 0.02;
+    d.life -= 0.008;
+    if(d.life <= 0) return;
+    pgCtx.save();
+    pgCtx.globalAlpha = d.life;
+    pgCtx.font = `${d.size}px serif`;
+    pgCtx.textAlign = 'center';
+    pgCtx.fillText('🕊️', d.x, d.y);
+    pgCtx.restore();
+  });
+  pgState.doves = pgState.doves.filter(d => d.life > 0);
+
+  /* ── Draw Signs (answer boards) ── */
+  if(pgState.questionIndex < PG_QUESTIONS.length && !pgState.processing && pgState.signFadeT < 0.2){
+    pgSignBounds = [];
+    const signCount = pgCurrentSigns.length;
+    const signW = Math.min(W * 0.26, 200);
+    const signH = Math.min(H * 0.14, 75);
+    const gap = W * 0.03;
+    const totalW = signCount * signW + (signCount - 1) * gap;
+    const startSX = (W - totalW) / 2;
+    const signY = H * 0.58;
+
+    pgCurrentSigns.forEach((sign, i) => {
+      const sx = startSX + i * (signW + gap);
+      const sy = signY + (sign.shakeTime > 0 ? Math.sin(sign.shakeTime * 40) * 4 : 0);
+
+      // Sign pole
+      pgCtx.fillStyle = '#78350f';
+      pgCtx.fillRect(sx + signW / 2 - 3, sy + signH, 6, 25);
+
+      // Sign board
+      const signGrad = pgCtx.createLinearGradient(sx, sy, sx, sy + signH);
+      if(sign.disabled){
+        signGrad.addColorStop(0, '#94a3b8');
+        signGrad.addColorStop(1, '#64748b');
+      } else {
+        signGrad.addColorStop(0, '#fef3c7');
+        signGrad.addColorStop(1, '#fbbf24');
+      }
+      pgCtx.fillStyle = signGrad;
+      pgCtx.beginPath();
+      pgCtx.roundRect(sx, sy, signW, signH, 10);
+      pgCtx.fill();
+      pgCtx.strokeStyle = sign.disabled ? '#475569' : '#b45309';
+      pgCtx.lineWidth = 3;
+      pgCtx.stroke();
+
+      // Text
+      pgCtx.fillStyle = sign.disabled ? '#f1f5f9' : '#7f1d1d';
+      pgCtx.font = `bold ${Math.min(20, signW / 10)}px "Hind Siliguri", sans-serif`;
+      pgCtx.textAlign = 'center';
+      pgCtx.textBaseline = 'middle';
+      // Word wrap for longer text
+      const lines = wrapText(sign.text, Math.floor(signW / 10));
+      const lineH = 22;
+      const startTy = sy + signH / 2 - (lines.length - 1) * lineH / 2;
+      lines.forEach((line, li) => {
+        pgCtx.fillText(line, sx + signW / 2, startTy + li * lineH);
+      });
+
+      if(sign.shakeTime > 0) sign.shakeTime -= 0.04;
+
+      pgSignBounds.push({ x: sx, y: sy, w: signW, h: signH, index: i, disabled: sign.disabled });
+    });
+  }
+}
+
+/* Word wrap helper */
+function wrapText(text, maxChars){
+  const words = text.split(' ');
+  const lines = [];
+  let current = '';
+  words.forEach(w => {
+    if((current + ' ' + w).trim().length <= maxChars){
+      current = (current + ' ' + w).trim();
+    } else {
+      if(current) lines.push(current);
+      current = w;
+    }
+  });
+  if(current) lines.push(current);
+  return lines.slice(0, 2);
+}
+
+/* Fighter drawing */
+function drawFighter(x, y, walking){
+  const walk = walking ? Math.sin(pgTime * 8) * 4 : 0;
+  const bodySway = Math.sin(pgTime * 4) * 1.5;
+
+  pgCtx.save();
+  pgCtx.translate(x, y);
+
+  // Shadow
+  pgCtx.fillStyle = 'rgba(0,0,0,0.25)';
+  pgCtx.beginPath();
+  pgCtx.ellipse(0, 5, 18, 5, 0, 0, Math.PI * 2);
+  pgCtx.fill();
+
+  // Legs
+  pgCtx.strokeStyle = '#78350f';
+  pgCtx.lineWidth = 4;
+  pgCtx.lineCap = 'round';
+  pgCtx.beginPath();
+  pgCtx.moveTo(-4, -12);
+  pgCtx.lineTo(-4 + walk, -2);
+  pgCtx.moveTo(4, -12);
+  pgCtx.lineTo(4 - walk, -2);
+  pgCtx.stroke();
+
+  // Feet (dark boots)
+  pgCtx.fillStyle = '#0f172a';
+  pgCtx.beginPath();
+  pgCtx.ellipse(-4 + walk, -1, 5, 3, 0, 0, Math.PI * 2);
+  pgCtx.fill();
+  pgCtx.beginPath();
+  pgCtx.ellipse(4 - walk, -1, 5, 3, 0, 0, Math.PI * 2);
+  pgCtx.fill();
+
+  // Body (green shirt)
+  pgCtx.fillStyle = '#16a34a';
+  pgCtx.beginPath();
+  pgCtx.roundRect(-10 + bodySway/2, -32, 20, 22, 5);
+  pgCtx.fill();
+  pgCtx.strokeStyle = '#065f46';
+  pgCtx.lineWidth = 1.5;
+  pgCtx.stroke();
+
+  // Arms
+  pgCtx.strokeStyle = '#fcd34d';
+  pgCtx.lineWidth = 4;
+  pgCtx.lineCap = 'round';
+  pgCtx.beginPath();
+  pgCtx.moveTo(-10 + bodySway/2, -26);
+  pgCtx.lineTo(-16 + bodySway/2 - walk/2, -14);
+  pgCtx.moveTo(10 + bodySway/2, -26);
+  pgCtx.lineTo(16 + bodySway/2 + walk/2, -14);
+  pgCtx.stroke();
+
+  // Hands
+  pgCtx.fillStyle = '#fcd34d';
+  pgCtx.beginPath();
+  pgCtx.arc(-16 + bodySway/2 - walk/2, -14, 3, 0, Math.PI * 2);
+  pgCtx.fill();
+  pgCtx.beginPath();
+  pgCtx.arc(16 + bodySway/2 + walk/2, -14, 3, 0, Math.PI * 2);
+  pgCtx.fill();
+
+  // Head
+  pgCtx.fillStyle = '#fcd34d';
+  pgCtx.beginPath();
+  pgCtx.arc(bodySway/2, -40, 10, 0, Math.PI * 2);
+  pgCtx.fill();
+  pgCtx.strokeStyle = '#92400e';
+  pgCtx.lineWidth = 1.5;
+  pgCtx.stroke();
+
+  // Hair
+  pgCtx.fillStyle = '#0f172a';
+  pgCtx.beginPath();
+  pgCtx.arc(bodySway/2, -42, 10, Math.PI, 0);
+  pgCtx.fill();
+
+  // Eyes
+  pgCtx.fillStyle = '#0f172a';
+  pgCtx.beginPath();
+  pgCtx.arc(bodySway/2 - 3.5, -40, 1.5, 0, Math.PI * 2);
+  pgCtx.fill();
+  pgCtx.beginPath();
+  pgCtx.arc(bodySway/2 + 3.5, -40, 1.5, 0, Math.PI * 2);
+  pgCtx.fill();
+
+  // Smile
+  pgCtx.strokeStyle = '#0f172a';
+  pgCtx.lineWidth = 1.2;
+  pgCtx.beginPath();
+  pgCtx.arc(bodySway/2, -37, 3.5, 0, Math.PI);
+  pgCtx.stroke();
+
+  // Headband (red)
+  pgCtx.fillStyle = '#dc2626';
+  pgCtx.fillRect(bodySway/2 - 10, -46, 20, 4);
+
+  // Small bag
+  pgCtx.fillStyle = '#78350f';
+  pgCtx.beginPath();
+  pgCtx.roundRect(-22 + bodySway/2, -26, 10, 14, 3);
+  pgCtx.fill();
+  pgCtx.strokeStyle = '#451a03';
+  pgCtx.lineWidth = 1;
+  pgCtx.stroke();
+
+  pgCtx.restore();
+}
+
+/* Handle clicks on signs */
+function handlePathClick(e){
+  if(pgState.processing) return;
+  if(pgState.questionIndex >= PG_QUESTIONS.length) return;
+
+  const r = pgCanvas.getBoundingClientRect();
+  const scaleX = pgCanvas.width / r.width;
+  const scaleY = pgCanvas.height / r.height;
+  const x = (e.clientX - r.left) * scaleX;
+  const y = (e.clientY - r.top) * scaleY;
+
+  for(const b of pgSignBounds){
+    if(b.disabled) continue;
+    if(x >= b.x && x <= b.x + b.w && y >= b.y && y <= b.y + b.h){
+      clickSign(b.index);
+      return;
+    }
+  }
+}
+
+function clickSign(idx){
+  const sign = pgCurrentSigns[idx];
+  if(!sign || sign.disabled) return;
+
+  const W = pgCanvas.width;
+  const totalQ = PG_QUESTIONS.length;
+  const startX = 60, endX = W - 100;
+
+  if(sign.isCorrect){
+    pgState.processing = true;
+    playSound('correct');
+    playSound('whistle');
+    pgState.score += 25;
+    document.getElementById('pgScoreText').innerText = toBn(pgState.score);
+
+    // Move fighter forward
+    pgState.questionIndex++;
+    const newX = startX + (pgState.questionIndex / totalQ) * (endX - startX);
+    pgState.fighterTargetX = newX;
+    pgState.jumping = true;
+    pgState.jumpT = 0;
+
+    // Celebration particles
+    for(let i = 0; i < 12; i++){
+      pgState.hearts.push({
+        x: newX + (Math.random() - 0.5) * 60,
+        y: pgCanvas.height * 0.7 + (Math.random() - 0.5) * 30,
+        emoji: ['❤️','🌹','⭐','🎉','✨','🌟'][Math.floor(Math.random() * 6)],
+        size: 18 + Math.random() * 14,
+        life: 1.2
+      });
+    }
+    // Doves
+    for(let i = 0; i < 3; i++){
+      pgState.doves.push({
+        x: newX,
+        y: pgCanvas.height * 0.5,
+        vx: (Math.random() - 0.5) * 2,
+        vy: -1 - Math.random(),
+        size: 22 + Math.random() * 10,
+        life: 2
+      });
+    }
+
+    // Fade out signs
+    pgState.signFadeT = 0.3;
+    setTimeout(() => { pgState.signFadeT = 0; }, 100);
+
+    const praise = getRandomItem(PRAISES);
+    const prefix = getNamePrefix();
+    speakText(sign.text, () => {
+      speakText(`${prefix}${praise} সঠিক!`, () => {
+        setTimeout(() => {
+          if(pgState.questionIndex >= PG_QUESTIONS.length){
+            showPathWin();
+          } else {
+            loadPathQuestion();
+          }
+        }, 800);
+      });
+    });
+  } else {
+    playSound('wrong');
+    sign.disabled = true;
+    sign.shakeTime = 0.9;
+    speakText(sign.text, () => speakText(getRandomItem(RETRIES)));
+  }
+}
+
+function showPathWin(){
+  stopPathGame();
+  pgState.processing = true;
+  const ov = document.getElementById('pgOverlay');
+  ov.classList.remove('hidden');
+  ov.classList.add('flex');
+  const prefix = getNamePrefix();
+  document.getElementById('pgOverlayMsg').innerText = `${prefix}মুক্তিযোদ্ধারা নয় মাস যুদ্ধ করে ১৬ই ডিসেম্বর বিজয় এনেছে! স্কোর: ${toBn(pgState.score)}!`;
+  playSound('whistle');
+  speakText(`${prefix}সাবাস! মুক্তিযোদ্ধারা নয় মাস যুদ্ধ করে ১৬ই ডিসেম্বর বিজয় এনেছে! ১৬ই ডিসেম্বর ১৯৭১ — বিজয় দিবস!`);
+}
+
+function restartPathGame(){
+  playSound('click');
+  stopAudio();
+  initPathGame();
+}
+
+/* ═══════════ CARD MATCHING GAME ═══════════ */
+function restartCardGame(){
+  playSound('click'); stopAudio();
+  cgState = { flipped: [], matched: [], score: 0, processing: false };
+  document.getElementById('cgScoreText').innerText = '০';
+  document.getElementById('cgOverlay').classList.add('hidden');
+  document.getElementById('cgOverlay').classList.remove('flex');
+  document.getElementById('cgQuestion').innerText = 'সঠিক জোড়া খুঁজে বের করো!';
+  buildCgBoard();
+  if(questionVoiceEnabled) speakText(`${getNamePrefix()}কার্ড উল্টে সঠিক প্রশ্ন ও উত্তর মিলাও!`);
+}
+function repeatCgQuestion(){ playSound('click'); speakText(`${getNamePrefix()}প্রশ্ন কার্ডে টাচ করো, তারপর উত্তর কার্ডে টাচ করো।`); }
+function buildCgBoard(){
+  const cards = [];
+  CG_PAIRS.forEach((p, idx) => {
+    cards.push({ pairId: idx, type: 'q', text: p.q, emoji: p.emoji });
+    cards.push({ pairId: idx, type: 'a', text: p.a, emoji: '✨' });
+  });
+  for(let i = cards.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [cards[i], cards[j]] = [cards[j], cards[i]];
+  }
+  cgState.cards = cards;
+  document.getElementById('cgBoard').innerHTML = cards.map((c, i) => {
+    const isMatched = cgState.matched.includes(i);
+    const isFlipped = cgState.flipped.includes(i);
+    const show = isMatched || isFlipped;
+    return `<div onclick="flipCgCard(${i})" class="cursor-pointer aspect-square rounded-2xl border-4 transition-all duration-300 flex flex-col items-center justify-center text-center p-2 relative overflow-hidden ${show ? (c.type === 'q' ? 'bg-gradient-to-br from-amber-400 to-orange-500 border-amber-600 text-white shadow-lg' : 'bg-gradient-to-br from-green-500 to-emerald-600 border-green-700 text-white shadow-lg') : 'bg-gradient-to-br from-slate-200 to-slate-300 border-slate-400 hover:from-slate-100 hover:to-slate-200'}">
+      ${show ? `<div class="text-2xl sm:text-3xl mb-1">${c.emoji}</div><div class="font-black text-[11px] sm:text-sm leading-tight">${c.text}</div>` : `<div class="text-3xl sm:text-4xl">🎴</div><div class="text-[10px] font-black text-slate-600 mt-1">টাচ করো</div>`}
+      ${isMatched ? '<div class="absolute top-1 right-1 text-lg">✅</div>' : ''}
+    </div>`;
+  }).join('');
+}
+function flipCgCard(i){
+  if(cgState.processing || cgState.matched.includes(i) || cgState.flipped.includes(i) || cgState.flipped.length >= 2) return;
+  playSound('flip');
+  cgState.flipped.push(i);
+  const card = cgState.cards[i];
+  speakText(card.text);
+  buildCgBoard();
+  if(cgState.flipped.length === 2){
+    cgState.processing = true;
+    const [a, b] = cgState.flipped;
+    const cardA = cgState.cards[a], cardB = cgState.cards[b];
+    setTimeout(() => {
+      if(cardA.pairId === cardB.pairId && cardA.type !== cardB.type){
+        cgState.matched.push(a, b);
+        cgState.score += 20;
+        document.getElementById('cgScoreText').innerText = toBn(cgState.score);
+        playSound('correct');
+        speakText(`${getNamePrefix()}${getRandomItem(PRAISES)} সঠিক জোড়া!`);
+        cgState.flipped = []; cgState.processing = false;
+        buildCgBoard();
+        if(cgState.matched.length === cgState.cards.length){
+          setTimeout(() => {
+            document.getElementById('cgOverlay').classList.remove('hidden');
+            document.getElementById('cgOverlay').classList.add('flex');
+            document.getElementById('cgOverlayMsg').innerText = `${getNamePrefix()}তুমি সব জোড়া সঠিকভাবে মিলিয়েছ! ${toBn(cgState.score)} পয়েন্ট!`;
+            speakText(`${getNamePrefix()}সাবাস! তুমি সব সঠিক জোড়া মিলিয়েছ!`);
+          }, 700);
+        }
+      } else {
+        playSound('wrong');
+        speakText(getRandomItem(RETRIES));
+        cgState.flipped = []; cgState.processing = false;
+        setTimeout(buildCgBoard, 400);
+      }
+    }, 900);
+  }
+}
+
+/* ═══════════ EXERCISES ═══════════ */
+function renderExercises(){
+  document.getElementById('fillBlanksContainer').innerHTML = FILL_BLANKS.map(q => {
+    const ua = fillBlanksAnswers[q.id];
+    const line = ua ? q.template.replace('{S}',`<u class="text-amber-700 font-black">${ua.selected}</u>`) : q.prompt;
+    return `<div class="p-3.5 bg-slate-50 rounded-2xl border border-gray-200 space-y-2">
+      <p class="font-bold text-gray-800 text-sm">${q.prompt}</p>
+      <div class="flex flex-wrap items-center gap-2">
+        ${q.options.map(opt => {
+          let cls = "bg-green-100 hover:bg-green-200 text-green-900 border-green-300";
+          if(ua && ua.selected === opt) cls = ua.isCorrect ? "bg-emerald-500 text-white border-emerald-600" : "bg-rose-500 text-white border-rose-600";
+          return `<button onclick="selectFillBlank(${q.id}, '${opt}')" class="${cls} px-3 py-1.5 rounded-xl border text-sm font-bold transition">${opt}</button>`;
+        }).join('')}
+      </div>
+      <div class="text-sm font-bold text-green-900 bg-green-50/80 p-2 rounded-xl border border-green-100">${line}</div>
+    </div>`;
+  }).join('');
+
+  document.getElementById('trueFalseContainer').innerHTML = TRUE_FALSE.map(it => {
+    const ua = trueFalseAnswers[it.id];
+    return `<div class="p-3.5 bg-slate-50 rounded-2xl border border-gray-200 space-y-3">
+      <p class="font-bold text-gray-800 text-sm">"${it.text}"</p>
+      <div class="flex items-center gap-2">
+        <button onclick="selectTrueFalse(${it.id}, true)" class="flex-1 py-2 rounded-xl text-xs font-black border transition ${ua && ua.selected === true ? (ua.isCorrect ? 'bg-emerald-500 text-white border-emerald-600' : 'bg-rose-500 text-white border-rose-600') : 'bg-emerald-100 text-emerald-900 border-emerald-300'}">✓ সত্য</button>
+        <button onclick="selectTrueFalse(${it.id}, false)" class="flex-1 py-2 rounded-xl text-xs font-black border transition ${ua && ua.selected === false ? (ua.isCorrect ? 'bg-emerald-500 text-white border-emerald-600' : 'bg-rose-500 text-white border-rose-600') : 'bg-rose-100 text-rose-900 border-rose-300'}">✕ মিথ্যা</button>
+      </div>
+    </div>`;
+  }).join('');
+
+  document.getElementById('dateMatchContainer').innerHTML = DATE_MATCH.map(q => {
+    const ua = dateMatchAnswers[q.id];
+    return `<div class="p-3.5 bg-slate-50 rounded-2xl border border-gray-200 space-y-2">
+      <p class="font-bold text-gray-800 text-sm">${q.question}</p>
+      <div class="flex flex-wrap items-center gap-2">
+        ${q.options.map(opt => {
+          let cls = "bg-red-100 hover:bg-red-200 text-red-900 border-red-300";
+          if(ua && ua.selected === opt) cls = ua.isCorrect ? "bg-emerald-500 text-white border-emerald-600" : "bg-rose-500 text-white border-rose-600";
+          return `<button onclick="selectDateMatch(${q.id}, '${opt}')" class="${cls} px-3 py-1.5 rounded-xl border text-sm font-bold transition">${opt}</button>`;
+        }).join('')}
+      </div>
+    </div>`;
+  }).join('');
+
+  document.getElementById('unscrambleContainer').innerHTML = UNSCRAMBLE.map(it => {
+    if(!unscrambleState[it.id]) unscrambleState[it.id] = { selected: [], isCorrect: null };
+    const st = unscrambleState[it.id];
+    return `<div class="p-3.5 bg-slate-50 rounded-2xl border border-gray-200 space-y-2">
+      <div class="flex items-center justify-between">
+        <span class="text-xs text-green-800 font-bold bg-green-200/80 px-3 py-1 rounded-full">💡 ${it.hint}</span>
+        ${st.isCorrect === true ? '<span class="text-xs font-black text-emerald-600 bg-emerald-100 px-2.5 py-1 rounded-full">🎉 বাহবা!</span>' : ''}
+        ${st.isCorrect === false ? '<span class="text-xs font-black text-rose-600 bg-rose-100 px-2.5 py-1 rounded-full">🔄 আবার!</span>' : ''}
+      </div>
+      <div class="min-h-[46px] bg-white rounded-xl border-2 ${st.isCorrect ? 'border-emerald-400' : 'border-green-300'} p-2 flex items-center gap-1.5 flex-wrap">
+        ${st.selected.length > 0 ? st.selected.map(c => `<span class="bg-green-600 text-white font-black text-lg px-3 py-1 rounded-xl">${c}</span>`).join('') : '<span class="text-gray-400 text-xs font-bold px-2">বর্ণে টাচ করো...</span>'}
+      </div>
+      <div class="flex flex-wrap items-center gap-2">
+        ${it.scrambled.map(c => {
+          const used = st.selected.includes(c);
+          return `<button onclick="tapUnscramble(${it.id}, '${c}')" ${used ? 'disabled' : ''} class="${used ? 'bg-gray-200 text-gray-400 border-gray-300' : 'bg-gradient-to-b from-amber-300 to-amber-400 text-amber-950 border-amber-500'} px-4 py-2 rounded-2xl border-2 text-lg font-black transition">${c}</button>`;
+        }).join('')}
+      </div>
+    </div>`;
+  }).join('');
+  updateScore();
+}
+function selectFillBlank(qid, opt){ const q = FILL_BLANKS.find(x => x.id === qid); const ok = (opt === q.correct); fillBlanksAnswers[qid] = { selected: opt, isCorrect: ok }; playSound(ok ? 'correct' : 'wrong'); speakText(opt, () => speakText(ok ? `${getRandomItem(PRAISES)} সঠিক!` : getRandomItem(RETRIES))); renderExercises(); }
+function selectTrueFalse(qid, choice){ const it = TRUE_FALSE.find(x => x.id === qid); const ok = (choice === it.isTrue); trueFalseAnswers[qid] = { selected: choice, isCorrect: ok }; playSound(ok ? 'correct' : 'wrong'); speakText(choice ? 'সত্য' : 'মিথ্যা', () => speakText(ok ? getRandomItem(PRAISES) : getRandomItem(RETRIES))); renderExercises(); }
+function selectDateMatch(qid, opt){ const q = DATE_MATCH.find(x => x.id === qid); const ok = (opt === q.correct); dateMatchAnswers[qid] = { selected: opt, isCorrect: ok }; playSound(ok ? 'correct' : 'wrong'); speakText(opt, () => speakText(ok ? `${getRandomItem(PRAISES)} সঠিক!` : getRandomItem(RETRIES))); renderExercises(); }
+function tapUnscramble(qid, ch){
+  playSound('click');
+  const it = UNSCRAMBLE.find(x => x.id === qid);
+  const st = unscrambleState[qid];
+  if(!st.selected.includes(ch)) st.selected.push(ch);
+  renderExercises();
+  speakText(ch, () => {
+    if(st.selected.length === it.scrambled.length){
+      const built = st.selected.join('');
+      if(built === it.correct){ st.isCorrect = true; playSound('correct'); speakText(`${getRandomItem(PRAISES)} সঠিক শব্দ: ${it.correct}`); }
+      else { st.isCorrect = false; playSound('wrong'); speakText(getRandomItem(RETRIES)); }
+      renderExercises();
+    }
+  });
+}
+function resetExercises(){ playSound('click'); fillBlanksAnswers = {}; trueFalseAnswers = {}; dateMatchAnswers = {}; unscrambleState = {}; renderExercises(); }
+function updateScore(){
+  let total = 0;
+  Object.values(fillBlanksAnswers).forEach(a => { if(a.isCorrect) total += 10; });
+  Object.values(trueFalseAnswers).forEach(a => { if(a.isCorrect) total += 10; });
+  Object.values(dateMatchAnswers).forEach(a => { if(a.isCorrect) total += 10; });
+  Object.values(unscrambleState).forEach(a => { if(a.isCorrect) total += 10; });
+  document.getElementById('exerciseScore').innerText = toBn(total);
+  const sb = document.getElementById('starBadge');
+  if(total >= 180) sb.innerText = '⭐ ⭐ ⭐ ⭐ ⭐';
+  else if(total >= 130) sb.innerText = '⭐ ⭐ ⭐ ⭐';
+  else if(total >= 70) sb.innerText = '⭐ ⭐ ⭐';
+  else sb.innerText = '⭐ ⭐';
+}
+
+/* PRINT */
+function openPrintModal(){ playSound('click'); stopAudio(); document.getElementById('printModal').classList.remove('hidden'); document.getElementById('printModal').classList.add('flex'); }
+function closePrintModal(){ document.getElementById('printModal').classList.add('hidden'); document.getElementById('printModal').classList.remove('flex'); }
+function selectAllPrint(s){ ['pr-story','pr-words','pr-dates','pr-compound','pr-ex1','pr-ex2','pr-ex3','pr-ex4','pr-key','pr-wc'].forEach(id => { const el = document.getElementById(id); if(el) el.checked = s; }); }
+function buildPrintHTML(){
+  const inc = id => { const el = document.getElementById(id); return el && el.checked; };
+  const any = ['pr-story','pr-words','pr-dates','pr-compound','pr-ex1','pr-ex2','pr-ex3','pr-ex4','pr-key','pr-wc'].some(id => inc(id));
+  if(!any){ alert('অন্তত একটি অংশ নির্বাচন করুন।'); return null; }
+  let h = `<div class="pr-page"><div class="pr-head">
+    <div class="pr-emoji-row">🇧🇩 🌅 🏆 🌹 🎖️</div>
+    <div class="pr-kicker">🇧🇩 NCTB • আমার বাংলা বই • প্রথম শ্রেণি • পৃষ্ঠা ৭৭-৭৮</div>
+    <h1>🇧🇩 পাঠ ৫২ : আমাদের মুক্তিযুদ্ধ 🎖️</h1>
+    <div class="pr-meta"><span>শ্রেণি : .....................</span><span>বিষয় : বাংলা</span><span>তারিখ : .....................</span></div>
+    <div class="pr-name">শিক্ষার্থীর নাম : .............................................................................. রোল : .................</div>
+  </div>`;
+  if(inc('pr-story')) h += `<div class="pr-sec"><h2>📖 ১। শুনি ও পড়ি</h2><ol class="pr-ol">${LESSON_SENTENCES.map((s,i) => `<li>${s}</li>`).join('')}</ol></div>`;
+  if(inc('pr-words')) h += `<div class="pr-sec"><h2>📚 ২। শব্দ শিখি</h2><table class="pr-table"><thead><tr><th style="width:22%">শব্দ</th><th style="width:28%">বর্ণ বিশ্লেষণ</th><th style="width:25%">অর্থ</th><th style="width:25%">বিস্তারিত</th></tr></thead><tbody>${VOCABULARY.map(v => `<tr><td><strong>${v.emoji} ${v.word}</strong></td><td>${v.breakdown}</td><td>${v.meaning}</td><td>${v.detailed}</td></tr>`).join('')}</tbody></table></div>`;
+  if(inc('pr-dates')) h += `<div class="pr-sec"><h2>📅 ৩। জেনে রাখি</h2><table class="pr-table"><thead><tr><th style="width:25%">তারিখ</th><th style="width:75%">বিবরণ</th></tr></thead><tbody>${DATES_INFO.map(d => `<tr><td><strong>${d.date}</strong></td><td>${d.desc}</td></tr>`).join('')}</tbody></table></div>`;
+  if(inc('pr-compound')) h += `<div class="pr-sec"><h2>🔤 ৪। যুক্তবর্ণ শিখি</h2><table class="pr-table"><thead><tr><th style="width:20%">যুক্তবর্ণ</th><th style="width:35%">বর্ণ বিশ্লেষণ</th><th style="width:45%">শব্দ</th></tr></thead><tbody>${COMPOUNDS.map(c => `<tr><td><strong style="font-size:14pt">${c.compound}</strong></td><td>${c.parts[0]} + ্ + ${c.parts[1]}</td><td><strong>${c.icon} ${c.word}</strong></td></tr>`).join('')}</tbody></table></div>`;
+  if(inc('pr-ex1')) h += `<div class="pr-sec"><h2>✍️ ৫। অনুশীলন ১</h2>${FILL_BLANKS.map((q,i) => `<div class="pr-q"><div style="font-weight:700">${toBn(i+1)}। ${q.prompt}</div><div class="pr-opts">বিকল্প: ${q.options.join('  /  ')}</div></div>`).join('')}</div>`;
+  if(inc('pr-ex2')) h += `<div class="pr-sec"><h2>✅ ৬। অনুশীলন ২</h2>${TRUE_FALSE.map((t,i) => `<div class="pr-q"><div style="font-weight:700">${toBn(i+1)}। "${t.text}"</div><div class="pr-tf">✔️ সত্য <span class="pr-box"></span> ✖️ মিথ্যা <span class="pr-box"></span></div></div>`).join('')}</div>`;
+  if(inc('pr-ex3')) h += `<div class="pr-sec"><h2>📅 ৭। অনুশীলন ৩</h2>${DATE_MATCH.map((q,i) => `<div class="pr-q"><div style="font-weight:700">${toBn(i+1)}। ${q.question}</div><div class="pr-opts">${q.options.map(o => `${o} <span class="pr-box"></span>`).join('  ')}</div></div>`).join('')}</div>`;
+  if(inc('pr-ex4')) h += `<div class="pr-sec"><h2>🧩 ৮। অনুশীলন ৪</h2>${UNSCRAMBLE.map((it,i) => `<div class="pr-q"><div style="font-weight:700">${toBn(i+1)}। বর্ণ: ${it.scrambled.join(' + ')}</div><div>শব্দ : <span style="display:inline-block;min-width:180px;border-bottom:1.4px dotted #0f172a">&nbsp;</span></div></div>`).join('')}</div>`;
+  if(inc('pr-key')) h += `<div class="pr-sec pr-pagebreak"><h2>🗝️ উত্তরপত্র</h2><h3>অনুশীলন ১:</h3><p class="pr-ans">${FILL_BLANKS.map((q,i) => `${toBn(i+1)}. ${q.correct}`).join(' | ')}</p><h3>অনুশীলন ২:</h3><p class="pr-ans">${TRUE_FALSE.map((t,i) => `${toBn(i+1)}. ${t.isTrue ? 'সত্য' : 'মিথ্যা'}`).join(' | ')}</p><h3>অনুশীলন ৩:</h3><p class="pr-ans">${DATE_MATCH.map((q,i) => `${toBn(i+1)}. ${q.correct}`).join(' | ')}</p><h3>অনুশীলন ৪:</h3><p class="pr-ans">${UNSCRAMBLE.map((it,i) => `${toBn(i+1)}. ${it.correct}`).join(' | ')}</p></div>`;
+  h += `<div class="pr-foot">📚 আমার বাংলা বই • প্রথম শ্রেণি • পাঠ ৫২ : আমাদের মুক্তিযুদ্ধ | 🎨 মো: সাইফুল্লাহ সরওয়ার ⭐</div></div>`;
+  if(inc('pr-wc')){
+    const totalPages = Math.ceil(VOCABULARY.length / 6);
+    for(let page = 0; page < totalPages; page++){
+      const chunk = VOCABULARY.slice(page * 6, page * 6 + 6);
+      h += `<div class="pr-page pr-pagebreak"><div class="pr-head"><h1>🎴 শব্দ কার্ড (৬টি / পেজ)</h1></div><div class="wc-print-grid">`;
+      chunk.forEach(v => { h += `<div class="wc-print-card"><div class="wc-icon">${v.emoji}</div><div class="wc-name">${v.word}</div><div class="wc-en">💡 ${v.meaning}</div><div class="wc-cut">✂️ - - - - - - - - ✂️</div></div>`; });
+      h += `</div></div>`;
+    }
+  }
+  return h;
+}
+function generatePrint(){ const c = buildPrintHTML(); if(!c) return; playSound('click'); closePrintModal(); stopAudio(); document.getElementById('printArea').innerHTML = c; setTimeout(() => window.print(), 350); }
+window.onafterprint = function(){ document.getElementById('printArea').innerHTML = ''; };
+
+/* DOWNLOAD & TOAST */
+function downloadHTML(){
+  playSound('click'); stopAudio();
+  try{
+    document.getElementById('printArea').innerHTML = '';
+    const pm = document.getElementById('printModal'); if(pm){ pm.classList.add('hidden'); pm.classList.remove('flex'); }
+    const im = document.getElementById('installModal'); if(im){ im.classList.add('hidden'); im.classList.remove('flex'); }
+    closeDrawer();
+    const fullHTML = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+    const blob = new Blob([fullHTML], { type: 'text/html;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'পাঠ-৫২-আমাদের-মুক্তিযুদ্ধ.html';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 500);
+    showToast('✅ ডাউনলোড সম্পন্ন!');
+  } catch(e){ console.error(e); alert('ডাউনলোড করা যায়নি।'); }
+}
+function showToast(msg){
+  const t = document.createElement('div');
+  t.style.cssText = `position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:linear-gradient(135deg,#16a34a,#dc2626);color:#fff;padding:12px 22px;border-radius:14px;font-family:'Hind Siliguri',sans-serif;font-weight:700;font-size:14px;box-shadow:0 10px 30px rgba(0,0,0,.25);z-index:9999;opacity:0;transition:all .35s ease;pointer-events:none;max-width:90vw;text-align:center;`;
+  t.textContent = msg;
+  document.body.appendChild(t);
+  requestAnimationFrame(() => { t.style.opacity = '1'; t.style.transform = 'translateX(-50%) translateY(0)'; });
+  setTimeout(() => { t.style.opacity = '0'; t.style.transform = 'translateX(-50%) translateY(80px)'; setTimeout(() => t.remove(), 400); }, 3200);
+}
+
+/* PWA */
+let deferredInstallPrompt = null;
+let isInstalled = false;
+if(window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) isInstalled = true;
+function isFileProtocol(){ return location.protocol === 'file:'; }
+function isSecureContextSafe(){ return location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1'; }
+function createManifest(){
+  try{
+    const iconSvg = (size) => {
+      const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${size} ${size}"><rect width="${size}" height="${size}" fill="#16a34a" rx="${size*0.18}"/><circle cx="${size/2}" cy="${size*0.5}" r="${size*0.28}" fill="#dc2626"/></svg>`;
+      return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+    };
+    const manifest = {
+      name: "আমাদের মুক্তিযুদ্ধ — পাঠ ৫২", short_name: "আমাদের মুক্তিযুদ্ধ",
+      description: "১ম শ্রেণির বাংলা পাঠ ৫২ — ইন্টারঅ্যাকটিভ অ্যাপ",
+      start_url: ".", scope: ".", display: "standalone", orientation: "any",
+      background_color: "#dcfce7", theme_color: "#16a34a", lang: "bn", dir: "ltr",
+      categories: ["education", "kids"],
+      icons: [
+        { src: iconSvg(192), sizes: "192x192", type: "image/svg+xml", purpose: "any" },
+        { src: iconSvg(192), sizes: "192x192", type: "image/svg+xml", purpose: "maskable" },
+        { src: iconSvg(512), sizes: "512x512", type: "image/svg+xml", purpose: "any" },
+        { src: iconSvg(512), sizes: "512x512", type: "image/svg+xml", purpose: "maskable" }
+      ]
+    };
+    const dataURI = 'data:application/manifest+json;charset=utf-8,' + encodeURIComponent(JSON.stringify(manifest));
+    let link = document.querySelector('link[rel="manifest"]');
+    if(!link){ link = document.createElement('link'); link.rel = 'manifest'; document.head.appendChild(link); }
+    link.href = dataURI;
+  } catch(e){}
+}
+async function registerServiceWorker(){
+  if(!('serviceWorker' in navigator)) return;
+  if(!isSecureContextSafe()) return;
+  const swCode = `self.addEventListener('install',e=>self.skipWaiting());self.addEventListener('activate',e=>e.waitUntil(self.clients.claim()));self.addEventListener('fetch',e=>e.respondWith(fetch(e.request).catch(()=>caches.match(e.request))));`;
+  try{
+    const blob = new Blob([swCode], { type:'application/javascript' });
+    const url = URL.createObjectURL(blob);
+    await navigator.serviceWorker.register(url, { scope: './' });
+  } catch(e){}
+}
+window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredInstallPrompt = e; });
+window.addEventListener('appinstalled', () => { isInstalled = true; deferredInstallPrompt = null; const btn = document.getElementById('installBtn'); const txt = document.getElementById('installBtnText'); if(btn){ btn.classList.remove('install-pulse'); btn.className = 'drawer-btn btn-teal'; } if(txt) txt.innerText = '✅ ইনস্টল করা আছে'; showToast('🎉 ইনস্টল সম্পন্ন!'); });
+function handleInstallClick(){
+  playSound('click');
+  if(isInstalled){ showToast('✅ অ্যাপটি ইনস্টল করা আছে!'); return; }
+  if(deferredInstallPrompt){ closeDrawer(); openInstallModal('native'); return; }
+  if(isFileProtocol()){ closeDrawer(); openInstallModal('file'); return; }
+  closeDrawer(); openInstallModal('manual');
+}
+function triggerNativeInstall(){ if(!deferredInstallPrompt){ showToast('⚠️ ইনস্টল প্রম্পট পাওয়া যাচ্ছে না।'); return; } deferredInstallPrompt.prompt(); deferredInstallPrompt.userChoice.then(c => { deferredInstallPrompt = null; closeInstallModal(); }); }
+function detectPlatform(){ const ua = navigator.userAgent || ''; if(/android/i.test(ua)) return 'android'; if(/iPad|iPhone|iPod/.test(ua) && !window.MSStream) return 'ios'; return 'desktop'; }
+function buildInstallSteps(mode){
+  const p = detectPlatform();
+  const steps = [];
+  if(mode === 'file'){
+    steps.push({icon:'⚠️', title:'লোকাল ফাইলে Chrome ইনস্টল করে না', body:'আপনি <strong>file://</strong> থেকে খুলেছেন।'});
+    steps.push({icon:'⚡', title:'দ্রুত সমাধান : Netlify Drop', body:'<strong>app.netlify.com/drop</strong> খুলুন → HTML ফাইল ড্র্যাগ করুন → HTTPS লিংক Chrome-এ খুলুন।'});
+    return steps;
+  }
+  if(mode === 'native'){ steps.push({icon:'✨', title:'আপনার ব্রাউজার ইনস্টল সাপোর্ট করছে', body:'সবুজ বাক্সে ক্লিক করুন।'}); return steps; }
+  if(p === 'android') steps.push({icon:'🌐', title:'Chrome (Android)', body:'উপরে-ডানে <strong>⋮</strong> → <strong>"Install app"</strong>।'});
+  else if(p === 'ios') steps.push({icon:'🧭', title:'Safari (iOS)', body:'নিচে <strong>Share □↑</strong> → <strong>"Add to Home Screen"</strong>।'});
+  else steps.push({icon:'💻', title:'Chrome (ডেস্কটপ)', body:'অ্যাড্রেস বারের ডানদিকে <strong>⊕ Install</strong> আইকন।'});
+  steps.push({icon:'✅', title:'ইনস্টল শেষে', body:'হোম স্ক্রিনে <strong>🇧🇩 আমাদের মুক্তিযুদ্ধ</strong> আইকন।'});
+  return steps;
+}
+function openInstallModal(mode){
+  const nb = document.getElementById('installNativeBox');
+  const header = document.getElementById('installHeaderMsg');
+  const stepsBox = document.getElementById('installSteps');
+  if(mode === 'native' && deferredInstallPrompt){ nb.classList.remove('hidden'); header.innerText = '💡 অথবা নিচের ধাপ দেখুন:'; }
+  else { nb.classList.add('hidden'); header.innerText = mode === 'file' ? '⚠️ file:// থেকে চলছে।' : '💡 ব্রাউজার অনুযায়ী ধাপ:'; }
+  const steps = buildInstallSteps(mode);
+  stepsBox.innerHTML = steps.map(s => `<div class="flex gap-3 bg-slate-50 border-2 border-slate-200 rounded-2xl p-3"><div class="text-2xl">${s.icon}</div><div><p class="font-black text-sm">${s.title}</p><p class="text-xs text-slate-600">${s.body}</p></div></div>`).join('');
+  document.getElementById('installModal').classList.remove('hidden');
+  document.getElementById('installModal').classList.add('flex');
+}
+function closeInstallModal(){ document.getElementById('installModal').classList.add('hidden'); document.getElementById('installModal').classList.remove('flex'); }
+createManifest();
+registerServiceWorker();
+
+/* PPT */
+function downloadPPT(){
+  if(typeof PptxGenJS === 'undefined'){ alert('লাইব্রেরি লোড হয়নি।'); return; }
+  const b = document.getElementById('pptBtnText');
+  const old = b.innerText;
+  b.innerText = '⏳...';
+  playSound('click'); stopAudio();
+  setTimeout(() => {
+    try{ buildPPTX(); }
+    catch(e){ console.error(e); alert('PPT তৈরি ব্যর্থ।'); }
+    finally{ b.innerText = old; }
+  }, 100);
+}
+function buildPPTX(){
+  const pptx = new PptxGenJS();
+  pptx.layout = 'LAYOUT_16x9';
+  const FONT = 'Nirmala UI';
+  const GREEN = '16a34a', RED = 'dc2626', WHITE = 'FFFFFF', DARK = '14532d', TEXT = '0F172A', AMBER = 'F59E0B';
+  function hdr(s, t){
+    s.addShape('rect', { x: 0, y: 0, w: 10, h: .85, fill: { color: GREEN } });
+    s.addShape('rect', { x: 0, y: .85, w: 10, h: .06, fill: { color: RED } });
+    s.addText(t, { x: .45, y: 0, w: 9.1, h: .85, fontSize: 22, bold: true, color: WHITE, fontFace: FONT, valign: 'middle', align: 'left' });
+  }
+  let s = pptx.addSlide();
+  s.background = { color: GREEN };
+  s.addShape('rect', { x: 0, y: 0, w: 10, h: .28, fill: { color: RED } });
+  s.addShape('rect', { x: 0, y: 5.34, w: 10, h: .29, fill: { color: RED } });
+  s.addText('🇧🇩 🌅 🏆 🌹 🎖️', { x: 0, y: .35, w: 10, h: .5, fontSize: 20, align: 'center' });
+  s.addText('📚 আমার বাংলা বই — প্রথম শ্রেণি', { x: 0, y: 2.3, w: 10, h: .5, fontSize: 18, bold: true, color: 'DCFCE7', align: 'center', fontFace: FONT });
+  s.addText('পাঠ ৫২ : আমাদের মুক্তিযুদ্ধ 🇧🇩', { x: 0, y: 2.9, w: 10, h: .9, fontSize: 30, bold: true, color: 'FDE68A', align: 'center', fontFace: FONT });
+  s.addText('🎨 মো: সাইফুল্লাহ সরওয়ার ⭐', { x: 0, y: 4.45, w: 10, h: .5, fontSize: 14, bold: true, color: 'FDE68A', align: 'center', fontFace: FONT });
+
+  s = pptx.addSlide(); s.background = { color: 'F8FAFC' };
+  hdr(s, '📖 শুনি ও পড়ি');
+  s.addText(LESSON_SENTENCES.map((t, i) => ({ text: `${toBn(i + 1)}। ${t}`, options: { breakLine: true } })), { x: .6, y: 1.1, w: 8.8, h: 4.2, fontSize: 12, fontFace: FONT, color: TEXT, lineSpacing: 20 });
+
+  s = pptx.addSlide(); s.background = { color: 'F8FAFC' };
+  hdr(s, '📚 শব্দ ও অর্থ');
+  const rows = [['শব্দ', 'অর্থ'].map(t => ({ text: t, options: { bold: true, color: WHITE, fill: { color: GREEN }, align: 'center' } }))];
+  VOCABULARY.forEach(v => rows.push([{ text: `${v.emoji} ${v.word}`, options: { bold: true, color: DARK } }, { text: v.detailed, options: { color: TEXT } }]));
+  s.addTable(rows, { x: .7, y: 1.2, w: 8.6, colW: [2.8, 5.8], fontFace: FONT, fontSize: 13, border: { pt: 1, color: 'BBF7D0' }, rowH: .4 });
+
+  s = pptx.addSlide(); s.background = { color: 'F8FAFC' };
+  hdr(s, '📅 জেনে রাখি');
+  s.addText([
+    { text: '🌅 ২৬শে মার্চ', options: { breakLine: true, bold: true, fontSize: 22, color: DARK } },
+    { text: 'স্বাধীনতা দিবস', options: { breakLine: true, fontSize: 15, color: TEXT } },
+    { text: '', options: { breakLine: true, fontSize: 10 } },
+    { text: '🏆 ১৬ই ডিসেম্বর', options: { breakLine: true, bold: true, fontSize: 22, color: RED } },
+    { text: 'বিজয় দিবস', options: { breakLine: true, fontSize: 15, color: TEXT } }
+  ], { x: .7, y: 1.3, w: 8.6, h: 3.8, fontFace: FONT, lineSpacing: 28 });
+
+  s = pptx.addSlide(); s.background = { color: GREEN };
+  s.addShape('rect', { x: 0, y: 0, w: 10, h: .28, fill: { color: RED } });
+  s.addShape('rect', { x: 0, y: 5.34, w: 10, h: .29, fill: { color: RED } });
+  s.addText('ধন্যবাদ 🇧🇩', { x: 0, y: 1.7, w: 10, h: .9, fontSize: 38, bold: true, color: 'FDE68A', align: 'center', fontFace: FONT });
+  s.addText('🎨 মো: সাইফুল্লাহ সরওয়ার ⭐', { x: 0, y: 4.2, w: 10, h: .5, fontSize: 15, bold: true, color: 'FDE68A', align: 'center', fontFace: FONT });
+  pptx.writeFile({ fileName: 'পাঠ-৫২-আমাদের-মুক্তিযুদ্ধ.pptx' }).catch(err => { console.error(err); alert('সেভ ব্যর্থ।'); });
+}
+
+/* INIT */
+window.addEventListener('load', () => {
+  renderPassage();
+  renderWordExplorer();
+  renderWordCards();
+  renderCompounds();
+  renderExercises();
+  buildCgBoard();
+  updateHeaderGreeting();
+  updateDrawerSound();
+  syncNameInputs(childName);
+  const qv1 = document.getElementById('questionVoiceToggle');
+  if(qv1) qv1.checked = questionVoiceEnabled;
+  const inp = document.getElementById('childNameInput');
+  if(inp) inp.value = childName;
+  if('speechSynthesis' in window){ window.speechSynthesis.onvoiceschanged = () => { window.speechSynthesis.getVoices(); }; }
+  if(isInstalled){ const btn = document.getElementById('installBtn'); const txt = document.getElementById('installBtnText'); if(btn){ btn.classList.remove('install-pulse'); btn.className = 'drawer-btn btn-teal'; } if(txt) txt.innerText = '✅ ইনস্টল করা আছে'; }
+});
+</script>
+</body>
+</html>
